@@ -1,5 +1,118 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>分类: jna - 苏同的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="苏同的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="苏同的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一个腹有节操的码农"><meta property="og:type" content="blog"><meta property="og:title" content="苏同的博客"><meta property="og:url" content="http://similarsu.github.io/"><meta property="og:site_name" content="苏同的博客"><meta property="og:description" content="一个腹有节操的码农"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://similarsu.github.io/img/og_image.png"><meta property="article:author" content="苏同"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://similarsu.github.io"},"headline":"苏同的博客","image":["http://similarsu.github.io/img/og_image.png"],"author":{"@type":"Person","name":"苏同"},"description":"一个腹有节操的码农"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="苏同的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">文章</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/similarsu"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">jna</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-08-30T00:22:02.000Z" title="2019/8/30 上午8:22:02">2019-08-30</time>发表</span><span class="level-item"><time dateTime="2021-03-02T08:48:26.358Z" title="2021/3/2 下午4:48:26">2021-03-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/jna/">jna</a></span><span class="level-item">几秒读完 (大约67个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/jna/%E5%A4%A7%E5%8D%8Ejna%E6%98%A0%E5%B0%84%E8%A1%A8/">大华jna映射表</a></h1><div class="content"><p>自定义|c|java<br>|-|-|-|<br>|WORD|unsigned short|short<br>|BYTE|unsigned char|byte<br>|LONG|int|int<br>|BOOL|int|int<br>|UINT|unsigned int|int<br>|DWORD|unsigned int|int<br>|LPDWORD|unsigned int*|Pointer<br>|TRUE|1|<br>|FALSE|0|<br>|NULL|0|<br>|MAX_PATH|260|<br>|LLONG|long|NativeLong<br>|LDWORD|long|NativeLong<br>|INT64|long long|long<br>|TP_U64|unsigned long long|long<br>|HDC|void*|Pointer<br>|HWND|void*|Pointer<br>|LPVOID|void*|Pointer<br>| |char *|String<br>| |enum|int<br>| |bool|byte</p>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>分类: jna - 苏同的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="苏同的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="苏同的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一个腹有节操的码农"><meta property="og:type" content="blog"><meta property="og:title" content="苏同的博客"><meta property="og:url" content="http://similarsu.github.io/"><meta property="og:site_name" content="苏同的博客"><meta property="og:description" content="一个腹有节操的码农"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://similarsu.github.io/img/og_image.png"><meta property="article:author" content="苏同"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://similarsu.github.io"},"headline":"苏同的博客","image":["http://similarsu.github.io/img/og_image.png"],"author":{"@type":"Person","name":"苏同"},"description":"一个腹有节操的码农"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="苏同的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">文章</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/similarsu"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">jna</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-08-30T00:22:02.000Z" title="2019/8/30 上午8:22:02">2019-08-30</time>发表</span><span class="level-item"><time dateTime="2021-03-02T08:50:07.739Z" title="2021/3/2 下午4:50:07">2021-03-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/jna/">jna</a></span><span class="level-item">几秒读完 (大约67个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/jna/%E5%A4%A7%E5%8D%8Ejna%E6%98%A0%E5%B0%84%E8%A1%A8/">大华jna映射表</a></h1><div class="content"><table>
+<thead>
+<tr>
+<th>自定义</th>
+<th>c</th>
+<th>java</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>WORD</td>
+<td>unsigned short</td>
+<td>short</td>
+</tr>
+<tr>
+<td>BYTE</td>
+<td>unsigned char</td>
+<td>byte</td>
+</tr>
+<tr>
+<td>LONG</td>
+<td>int</td>
+<td>int</td>
+</tr>
+<tr>
+<td>BOOL</td>
+<td>int</td>
+<td>int</td>
+</tr>
+<tr>
+<td>UINT</td>
+<td>unsigned int</td>
+<td>int</td>
+</tr>
+<tr>
+<td>DWORD</td>
+<td>unsigned int</td>
+<td>int</td>
+</tr>
+<tr>
+<td>LPDWORD</td>
+<td>unsigned int*</td>
+<td>Pointer</td>
+</tr>
+<tr>
+<td>TRUE</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>FALSE</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_PATH</td>
+<td>260</td>
+<td></td>
+</tr>
+<tr>
+<td>LLONG</td>
+<td>long</td>
+<td>NativeLong</td>
+</tr>
+<tr>
+<td>LDWORD</td>
+<td>long</td>
+<td>NativeLong</td>
+</tr>
+<tr>
+<td>INT64</td>
+<td>long long</td>
+<td>long</td>
+</tr>
+<tr>
+<td>TP_U64</td>
+<td>unsigned long long</td>
+<td>long</td>
+</tr>
+<tr>
+<td>HDC</td>
+<td>void*</td>
+<td>Pointer</td>
+</tr>
+<tr>
+<td>HWND</td>
+<td>void*</td>
+<td>Pointer</td>
+</tr>
+<tr>
+<td>LPVOID</td>
+<td>void*</td>
+<td>Pointer</td>
+</tr>
+<tr>
+<td></td>
+<td>char *</td>
+<td>String</td>
+</tr>
+<tr>
+<td></td>
+<td>enum</td>
+<td>int</td>
+</tr>
+<tr>
+<td></td>
+<td>bool</td>
+<td>byte</td>
+</tr>
+</tbody></table>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-08-29T00:22:02.000Z" title="2019/8/29 上午8:22:02">2019-08-29</time>发表</span><span class="level-item"><time dateTime="2021-03-02T08:41:22.775Z" title="2021/3/2 下午4:41:22">2021-03-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/jna/">jna</a></span><span class="level-item">几秒读完 (大约49个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/jna/jna%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/">jna加载顺序</a></h1><div class="content"><p>1、jna.library.path(idea vm or -D)。<br>2、环境变量PATH（Windows）, LD_LIBRARY_PATH（Linux）,DYLD_LIBRARY_PATH（OSX）。<br>3、classpath路径下的{OS}-{ARCH}/{LIBRARY}，如win32-x86, linux-amd64, or darwin。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-08-28T00:22:02.000Z" title="2019/8/28 上午8:22:02">2019-08-28</time>发表</span><span class="level-item"><time dateTime="2021-03-02T08:39:31.674Z" title="2021/3/2 下午4:39:31">2021-03-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/jna/">jna</a></span><span class="level-item">1 分钟读完 (大约179个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/jna/jna%E6%8C%87%E5%8D%97/">jna指南</a></h1><div class="content"><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="引入相关jar"><a href="#引入相关jar" class="headerlink" title="引入相关jar"></a>引入相关jar</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jna.jar</span><br><span class="line">example.jar</span><br></pre></td></tr></table></figure>
 
