@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>苏同的博客</title>
+  
+  <subtitle>有健康叫资产，没健康叫遗产</subtitle>
+  <link href="http://similarsu.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://similarsu.github.io/"/>
+  <updated>2020-12-10T05:57:42.000Z</updated>
+  <id>http://similarsu.github.io/</id>
+  
+  <author>
+    <name>苏同</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>h3c中sftp使用教程</title>
+    <link href="http://similarsu.github.io/%E7%BD%91%E5%85%B3/h3c/h3c%E4%B8%ADsftp%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <id>http://similarsu.github.io/%E7%BD%91%E5%85%B3/h3c/h3c%E4%B8%ADsftp%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</id>
+    <published>2020-12-10T05:57:42.000Z</published>
+    <updated>2020-12-10T05:57:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="开启sftp"><a href="#开启sftp" class="headerlink" title="开启sftp"></a>开启sftp</h2><p><strong>网关</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sys</span><br><span class="line">sftp server enable</span><br></pre></td></tr></table></figure><h2 id="关闭sftp"><a href="#关闭sftp" class="headerlink" title="关闭sftp"></a>关闭sftp</h2><p><strong>网关</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sys</span><br><span class="line">sftp server enable</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="登陆sftp"><a href="#登陆sftp" class="headerlink" title="登陆sftp"></a>登陆sftp</h2><p><strong>客户端</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sftp -P&#123;post&#125; &#123;user&#125;@&#123;host&#125;</span><br></pre></td></tr></table></figure><ul><li>post:端口，默认22</li><li>user:用户名</li><li>host:ip</li></ul><h2 id="退出sftp"><a href="#退出sftp" class="headerlink" title="退出sftp"></a>退出sftp</h2><p><strong>客户端</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; bye</span><br><span class="line">也可使用exit</span><br></pre></td></tr></table></figure><h2 id="列出当前目录下清单"><a href="#列出当前目录下清单" class="headerlink" title="列出当前目录下清单"></a>列出当前目录下清单</h2><p><strong>客户端</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; dir</span><br><span class="line">也可使用ls</span><br></pre></td></tr></table></figure><p>-a：显示指定目录下文件及文件夹的名称。</p><p>-l：以列表的形式显示指定目录下文件及文件夹的详细信息。</p><h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt;help</span><br></pre></td></tr></table></figure><h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; get [remote] [local]</span><br><span class="line">可结合lcd修改本地路径，改变下载位置</span><br></pre></td></tr></table></figure><ul><li>remote:远程文件</li><li>local:本地文件，不填同名</li></ul><h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; put [local] [remote]</span><br><span class="line">可结合cd修改远程路径，改变上传位置</span><br></pre></td></tr></table></figure><ul><li>remote:远程文件，不填同名</li><li>local:本地文件</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;开启sftp&quot;&gt;&lt;a href=&quot;#开启sftp&quot; class=&quot;headerlink&quot; title=&quot;开启sftp&quot;&gt;&lt;/a&gt;开启sftp&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;网关&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sftp server enable&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;关闭sftp&quot;&gt;&lt;a href=&quot;#关闭sftp&quot; class=&quot;headerlink&quot; title=&quot;关闭sftp&quot;&gt;&lt;/a&gt;关闭sftp&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;网关&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sftp server enable&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="网关" scheme="http://similarsu.github.io/categories/%E7%BD%91%E5%85%B3/"/>
+    
+    <category term="h3c" scheme="http://similarsu.github.io/categories/%E7%BD%91%E5%85%B3/h3c/"/>
+    
+    
+    <category term="h3c" scheme="http://similarsu.github.io/tags/h3c/"/>
+    
+    <category term="sftp" scheme="http://similarsu.github.io/tags/sftp/"/>
+    
+    <category term="教程" scheme="http://similarsu.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux中host配置</title>
+    <link href="http://similarsu.github.io/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/linux%E4%B8%ADhost%E9%85%8D%E7%BD%AE/"/>
+    <id>http://similarsu.github.io/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/linux%E4%B8%ADhost%E9%85%8D%E7%BD%AE/</id>
+    <published>2020-07-31T01:40:42.000Z</published>
+    <updated>2020-07-31T01:40:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>访问/etc/hosts</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">35.185.44.232 similarsu.gitlab.io</span><br></pre></td></tr></table></figure><p><strong>注：操作前备份该hosts文件</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;访问/etc/hosts&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre</summary>
+      
+    
+    
+    
+    <category term="操作系统" scheme="http://similarsu.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="linux" scheme="http://similarsu.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/"/>
+    
+    
+    <category term="linux" scheme="http://similarsu.github.io/tags/linux/"/>
+    
+    <category term="host" scheme="http://similarsu.github.io/tags/host/"/>
+    
+    <category term="配置" scheme="http://similarsu.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows中host配置</title>
+    <link href="http://similarsu.github.io/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/windows%E4%B8%ADhost%E9%85%8D%E7%BD%AE/"/>
+    <id>http://similarsu.github.io/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/windows%E4%B8%ADhost%E9%85%8D%E7%BD%AE/</id>
+    <published>2020-07-30T01:40:42.000Z</published>
+    <updated>2020-07-30T01:40:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>访问C:\Windows\System32\drivers\etc下的hosts文件，新增如下内容</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">35.185.44.232 similarsu.gitlab.io</span><br></pre></td></tr></table></figure><p><strong>注：操作前备份该hosts文件，且使用管理员权限</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;访问C:\Windows\System32\drivers\etc下的hosts文件，新增如下内容&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre</summary>
+      
+    
+    
+    
+    <category term="操作系统" scheme="http://similarsu.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="windows" scheme="http://similarsu.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/"/>
+    
+    
+    <category term="windows" scheme="http://similarsu.github.io/tags/windows/"/>
+    
+    <category term="host" scheme="http://similarsu.github.io/tags/host/"/>
+    
+    <category term="配置" scheme="http://similarsu.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>config.dat is locked by another process</title>
+    <link href="http://similarsu.github.io/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/config.dat%20is%20locked%20by%20another%20process/"/>
+    <id>http://similarsu.github.io/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/config.dat%20is%20locked%20by%20another%20process/</id>
+    <published>2020-07-11T01:40:42.000Z</published>
+    <updated>2020-07-11T01:40:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fuser -vik &#x2F;var&#x2F;cache&#x2F;debconf&#x2F;config.dat</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    <category term="虚拟机" scheme="http://similarsu.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    <category term="virtualbox" scheme="http://similarsu.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/"/>
+    
+    
+    <category term="virtualbox" scheme="http://similarsu.github.io/tags/virtualbox/"/>
+    
+    <category term="config.dat" scheme="http://similarsu.github.io/tags/config-dat/"/>
+    
+    <category term="locked" scheme="http://similarsu.github.io/tags/locked/"/>
+    
+    <category term="another process" scheme="http://similarsu.github.io/tags/another-process/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kernel driver not installed(rc=-1908)</title>
+    <link href="http://similarsu.github.io/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/kernel%20driver%20not%20installed(rc=-1908)/"/>
+    <id>http://similarsu.github.io/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/kernel%20driver%20not%20installed(rc=-1908)/</id>
+    <published>2020-07-10T01:40:42.000Z</published>
+    <updated>2020-07-10T01:40:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install virtualbox-dkms</span><br><span class="line">modprobe vboxdrv</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;</summary>
+      
+    
+    
+    
+    <category term="虚拟机" scheme="http://similarsu.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    <category term="virtualbox" scheme="http://similarsu.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/"/>
+    
+    
+    <category term="virtualbox" scheme="http://similarsu.github.io/tags/virtualbox/"/>
+    
+    <category term="kernel" scheme="http://similarsu.github.io/tags/kernel/"/>
+    
+    <category term="driver" scheme="http://similarsu.github.io/tags/driver/"/>
+    
+    <category term="not installed" scheme="http://similarsu.github.io/tags/not-installed/"/>
+    
+    <category term="rc=-1908" scheme="http://similarsu.github.io/tags/rc-1908/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>virtualbox-error-verr-supdrv-component-not-found</title>
+    <link href="http://similarsu.github.io/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/virtualbox-error-verr-supdrv-component-not-found/"/>
+    <id>http://similarsu.github.io/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/virtualbox-error-verr-supdrv-component-not-found/</id>
+    <published>2020-07-09T01:40:42.000Z</published>
+    <updated>2020-07-09T01:40:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">modprobe vboxnetftl</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    <category term="虚拟机" scheme="http://similarsu.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    <category term="virtualbox" scheme="http://similarsu.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/virtualbox/"/>
+    
+    
+    <category term="virtualbox" scheme="http://similarsu.github.io/tags/virtualbox/"/>
+    
+    <category term="supdrv" scheme="http://similarsu.github.io/tags/supdrv/"/>
+    
+    <category term="component" scheme="http://similarsu.github.io/tags/component/"/>
+    
+    <category term="not-found" scheme="http://similarsu.github.io/tags/not-found/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vm网络模式</title>
+    <link href="http://similarsu.github.io/%E8%99%9A%E6%8B%9F%E6%9C%BA/vmware/vm%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://similarsu.github.io/%E8%99%9A%E6%8B%9F%E6%9C%BA/vmware/vm%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-07-08T01:40:42.000Z</published>
+    <updated>2020-07-08T01:40:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/%E8%99%9A%E6%8B%9F%E6%9C%BA/vmware/vm%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F/vm-net-mode.png" class="">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;img src=&quot;/%E8%99%9A%E6%8B%9F%E6%9C%BA/vmware/vm%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F/vm-net-mode.png&quot; class=&quot;&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="虚拟机" scheme="http://similarsu.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    <category term="vmware" scheme="http://similarsu.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/vmware/"/>
+    
+    
+    <category term="vm" scheme="http://similarsu.github.io/tags/vm/"/>
+    
+    <category term="网络模式" scheme="http://similarsu.github.io/tags/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql全文检索</title>
+    <link href="http://similarsu.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
+    <id>http://similarsu.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/</id>
+    <published>2020-04-09T01:40:42.000Z</published>
+    <updated>2020-04-09T01:40:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>以base_person为例，基于InnoDB</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;base_person&#96; (</span><br><span class="line">  &#96;id&#96; bigint(20) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  &#96;address&#96; text,</span><br><span class="line">  &#96;bp_attention&#96; tinyint(4) NOT NULL DEFAULT &#39;0&#39;,</span><br><span class="line">  &#96;birthday&#96; varchar(10) DEFAULT NULL,</span><br><span class="line">  &#96;t_create_time&#96; datetime NOT NULL,</span><br><span class="line">  &#96;t_creator&#96; bigint(20) NOT NULL,</span><br><span class="line">  &#96;t_deleted&#96; bit(1) NOT NULL,</span><br><span class="line">  &#96;domicile&#96; text,</span><br><span class="line">  &#96;family_relation&#96; varchar(2) DEFAULT NULL,</span><br><span class="line">  &#96;bp_foreign&#96; tinyint(4) NOT NULL DEFAULT &#39;0&#39;,</span><br><span class="line">  &#96;id_card&#96; varchar(30) NOT NULL,</span><br><span class="line">  &#96;bp_id_card_image&#96; longtext,</span><br><span class="line">  &#96;id_type&#96; varchar(2) NOT NULL,</span><br><span class="line">  &#96;bp_image&#96; longtext,</span><br><span class="line">  &#96;marital_status&#96; varchar(2) DEFAULT NULL,</span><br><span class="line">  &#96;t_modifier&#96; bigint(20) NOT NULL,</span><br><span class="line">  &#96;t_modify_time&#96; datetime NOT NULL,</span><br><span class="line">  &#96;name&#96; varchar(50) NOT NULL,</span><br><span class="line">  &#96;nation&#96; varchar(16) DEFAULT NULL,</span><br><span class="line">  &#96;occupation&#96; varchar(30) DEFAULT NULL,</span><br><span class="line">  &#96;phone&#96; varchar(20) NOT NULL,</span><br><span class="line">  &#96;political_status&#96; varchar(2) DEFAULT NULL,</span><br><span class="line">  &#96;province_id&#96; bigint(20) DEFAULT NULL,</span><br><span class="line">  &#96;sex&#96; varchar(2) DEFAULT NULL,</span><br><span class="line">  &#96;age&#96; int(11) NOT NULL,</span><br><span class="line">  &#96;company_address&#96; varchar(255) NOT NULL,</span><br><span class="line">  &#96;company_name&#96; varchar(255) NOT NULL,</span><br><span class="line">  &#96;culture&#96; varchar(255) NOT NULL,</span><br><span class="line">  &#96;id_card_validity&#96; varchar(255) DEFAULT NULL,</span><br><span class="line">  &#96;nationality&#96; varchar(255) NOT NULL,</span><br><span class="line">  &#96;position&#96; varchar(255) NOT NULL,</span><br><span class="line">  PRIMARY KEY (&#96;id&#96;),</span><br><span class="line">  UNIQUE KEY &#96;base_person_uindex&#96; (&#96;id_card&#96;) USING BTREE</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br><span class="line"></span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="创建-删除"><a href="#创建-删除" class="headerlink" title="创建/删除"></a>创建/删除</h2><ul><li>创建</li></ul><p><strong>创建表的同时创建全文索引</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;base_person&#96; (</span><br><span class="line">  &#96;id&#96; bigint(20) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  &#96;address&#96; text,</span><br><span class="line">  ……</span><br><span class="line">  PRIMARY KEY (&#96;id&#96;),</span><br><span class="line">  ……</span><br><span class="line">  fulltext ft_base_person2 (address,domicile,name,phone) WITH PARSER ngram</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br></pre></td></tr></table></figure><p><strong>通过alter方式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table base_person add fulltext index ft_base_person (address,domicile,name,phone) WITH PARSER ngram;</span><br></pre></td></tr></table></figure><p><strong>通过create方式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create fulltext index ft_base_person on base_person (address,domicile,name,phone) with parser ngram;</span><br></pre></td></tr></table></figure><ul><li>删除</li></ul><p><strong>通过alter方式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table base_person drop index ft_base_person;</span><br></pre></td></tr></table></figure><p><strong>通过drop方式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop index ft_base_person on base_person;</span><br></pre></td></tr></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul><li>自然语言</li></ul><p><strong>查出含有黑龙江和138577的记录，默认已排序</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT address,domicile,name,phone FROM base_person where match(address,domicile,name,phone) against(&#39;黑龙江 138577&#39;);</span><br></pre></td></tr></table></figure><img src="/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/1.png" class=""><p><strong>展示关联分值</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT address,domicile,name,phone,match(address,domicile,name,phone) against(&#39;黑龙江 138577&#39;) as score FROM base_person;</span><br></pre></td></tr></table></figure><img src="/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/2.png" class=""><p><strong>查出含有黑龙江和138577的记录和分值，并排序</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT address,domicile,name,phone,match(address,domicile,name,phone) against(&#39;黑龙江 138577&#39;) as score FROM base_person where match(address,domicile,name,phone) against(&#39;黑龙江 138577&#39;)</span><br></pre></td></tr></table></figure><img src="/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/3.png" class=""><ul><li>BOOLEAN模式</li></ul><p><strong>TODO</strong></p><ul><li>explain模式</li></ul><p><strong>TODO</strong></p><h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><p><a href="https://dev.mysql.com/doc/refman/5.7/en/fulltext-restrictions.html">https://dev.mysql.com/doc/refman/5.7/en/fulltext-restrictions.html</a></p><h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><ul><li><a href="https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ngram_token_size">ngram_token_size</a></li></ul><p>如果需要搜索单字，就要把ngram_token_size设置为1</p><p><strong>通过mysqld</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --ngram_token_size&#x3D;1</span><br></pre></td></tr></table></figure><p><strong>通过my.cnf</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[mysqld] </span><br><span class="line">ngram_token_size&#x3D;1</span><br></pre></td></tr></table></figure><p><strong><strong>须重建索引</strong></strong></p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;以base_person为例，基于InnoDB&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;CREATE TABLE &amp;#96;base_person&amp;#96; (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;id&amp;#96; bigint(20) NOT NULL AUTO_INCREMENT,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;address&amp;#96; text,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;bp_attention&amp;#96; tinyint(4) NOT NULL DEFAULT &amp;#39;0&amp;#39;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;birthday&amp;#96; varchar(10) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_create_time&amp;#96; datetime NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_creator&amp;#96; bigint(20) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_deleted&amp;#96; bit(1) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;domicile&amp;#96; text,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;family_relation&amp;#96; varchar(2) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;bp_foreign&amp;#96; tinyint(4) NOT NULL DEFAULT &amp;#39;0&amp;#39;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;id_card&amp;#96; varchar(30) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;bp_id_card_image&amp;#96; longtext,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;id_type&amp;#96; varchar(2) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;bp_image&amp;#96; longtext,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;marital_status&amp;#96; varchar(2) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_modifier&amp;#96; bigint(20) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_modify_time&amp;#96; datetime NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;name&amp;#96; varchar(50) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;nation&amp;#96; varchar(16) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;occupation&amp;#96; varchar(30) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;phone&amp;#96; varchar(20) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;political_status&amp;#96; varchar(2) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;province_id&amp;#96; bigint(20) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;sex&amp;#96; varchar(2) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;age&amp;#96; int(11) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;company_address&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;company_name&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;culture&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;id_card_validity&amp;#96; varchar(255) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;nationality&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;position&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  PRIMARY KEY (&amp;#96;id&amp;#96;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  UNIQUE KEY &amp;#96;base_person_uindex&amp;#96; (&amp;#96;id_card&amp;#96;) USING BTREE&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;) ENGINE&amp;#x3D;InnoDB DEFAULT CHARSET&amp;#x3D;utf8;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="http://similarsu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="mysql" scheme="http://similarsu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/"/>
+    
+    
+    <category term="mysql" scheme="http://similarsu.github.io/tags/mysql/"/>
+    
+    <category term="全文检索" scheme="http://similarsu.github.io/tags/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql全文检索</title>
+    <link href="http://similarsu.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/springboot%E4%B8%ADdev-tools%E4%BD%BF%E7%94%A8/"/>
+    <id>http://similarsu.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/springboot%E4%B8%ADdev-tools%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-04-09T01:40:42.000Z</published>
+    <updated>2020-04-09T01:40:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>以base_person为例，基于InnoDB</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;base_person&#96; (</span><br><span class="line">  &#96;id&#96; bigint(20) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  &#96;address&#96; text,</span><br><span class="line">  &#96;bp_attention&#96; tinyint(4) NOT NULL DEFAULT &#39;0&#39;,</span><br><span class="line">  &#96;birthday&#96; varchar(10) DEFAULT NULL,</span><br><span class="line">  &#96;t_create_time&#96; datetime NOT NULL,</span><br><span class="line">  &#96;t_creator&#96; bigint(20) NOT NULL,</span><br><span class="line">  &#96;t_deleted&#96; bit(1) NOT NULL,</span><br><span class="line">  &#96;domicile&#96; text,</span><br><span class="line">  &#96;family_relation&#96; varchar(2) DEFAULT NULL,</span><br><span class="line">  &#96;bp_foreign&#96; tinyint(4) NOT NULL DEFAULT &#39;0&#39;,</span><br><span class="line">  &#96;id_card&#96; varchar(30) NOT NULL,</span><br><span class="line">  &#96;bp_id_card_image&#96; longtext,</span><br><span class="line">  &#96;id_type&#96; varchar(2) NOT NULL,</span><br><span class="line">  &#96;bp_image&#96; longtext,</span><br><span class="line">  &#96;marital_status&#96; varchar(2) DEFAULT NULL,</span><br><span class="line">  &#96;t_modifier&#96; bigint(20) NOT NULL,</span><br><span class="line">  &#96;t_modify_time&#96; datetime NOT NULL,</span><br><span class="line">  &#96;name&#96; varchar(50) NOT NULL,</span><br><span class="line">  &#96;nation&#96; varchar(16) DEFAULT NULL,</span><br><span class="line">  &#96;occupation&#96; varchar(30) DEFAULT NULL,</span><br><span class="line">  &#96;phone&#96; varchar(20) NOT NULL,</span><br><span class="line">  &#96;political_status&#96; varchar(2) DEFAULT NULL,</span><br><span class="line">  &#96;province_id&#96; bigint(20) DEFAULT NULL,</span><br><span class="line">  &#96;sex&#96; varchar(2) DEFAULT NULL,</span><br><span class="line">  &#96;age&#96; int(11) NOT NULL,</span><br><span class="line">  &#96;company_address&#96; varchar(255) NOT NULL,</span><br><span class="line">  &#96;company_name&#96; varchar(255) NOT NULL,</span><br><span class="line">  &#96;culture&#96; varchar(255) NOT NULL,</span><br><span class="line">  &#96;id_card_validity&#96; varchar(255) DEFAULT NULL,</span><br><span class="line">  &#96;nationality&#96; varchar(255) NOT NULL,</span><br><span class="line">  &#96;position&#96; varchar(255) NOT NULL,</span><br><span class="line">  PRIMARY KEY (&#96;id&#96;),</span><br><span class="line">  UNIQUE KEY &#96;base_person_uindex&#96; (&#96;id_card&#96;) USING BTREE</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br><span class="line"></span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="创建-删除"><a href="#创建-删除" class="headerlink" title="创建/删除"></a>创建/删除</h2><ul><li>创建</li></ul><p><strong>创建表的同时创建全文索引</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;base_person&#96; (</span><br><span class="line">  &#96;id&#96; bigint(20) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  &#96;address&#96; text,</span><br><span class="line">  ……</span><br><span class="line">  PRIMARY KEY (&#96;id&#96;),</span><br><span class="line">  ……</span><br><span class="line">  fulltext ft_base_person2 (address,domicile,name,phone) WITH PARSER ngram</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br></pre></td></tr></table></figure><p><strong>通过alter方式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table base_person add fulltext index ft_base_person (address,domicile,name,phone) WITH PARSER ngram;</span><br></pre></td></tr></table></figure><p><strong>通过create方式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create fulltext index ft_base_person on base_person (address,domicile,name,phone) with parser ngram;</span><br></pre></td></tr></table></figure><ul><li>删除</li></ul><p><strong>通过alter方式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table base_person drop index ft_base_person;</span><br></pre></td></tr></table></figure><p><strong>通过drop方式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop index ft_base_person on base_person;</span><br></pre></td></tr></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul><li>自然语言</li></ul><p><strong>查出含有黑龙江和138577的记录，默认已排序</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT address,domicile,name,phone FROM base_person where match(address,domicile,name,phone) against(&#39;黑龙江 138577&#39;);</span><br></pre></td></tr></table></figure><p><strong>展示关联分值</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT address,domicile,name,phone,match(address,domicile,name,phone) against(&#39;黑龙江 138577&#39;) as score FROM base_person;</span><br></pre></td></tr></table></figure><p><strong>查出含有黑龙江和138577的记录和分值，并排序</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT address,domicile,name,phone,match(address,domicile,name,phone) against(&#39;黑龙江 138577&#39;) as score FROM base_person where match(address,domicile,name,phone) against(&#39;黑龙江 138577&#39;)</span><br></pre></td></tr></table></figure><ul><li>BOOLEAN模式</li></ul><p><strong>TODO</strong></p><ul><li>explain模式</li></ul><p><strong>TODO</strong></p><h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><p><a href="https://dev.mysql.com/doc/refman/5.7/en/fulltext-restrictions.html">https://dev.mysql.com/doc/refman/5.7/en/fulltext-restrictions.html</a></p><h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><ul><li><a href="https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ngram_token_size">ngram_token_size</a></li></ul><p>如果需要搜索单字，就要把ngram_token_size设置为1</p><p><strong>通过mysqld</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --ngram_token_size&#x3D;1</span><br></pre></td></tr></table></figure><p><strong>通过my.cnf</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[mysqld] </span><br><span class="line">ngram_token_size&#x3D;1</span><br></pre></td></tr></table></figure><p><strong><strong>须重建索引</strong></strong></p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;以base_person为例，基于InnoDB&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;CREATE TABLE &amp;#96;base_person&amp;#96; (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;id&amp;#96; bigint(20) NOT NULL AUTO_INCREMENT,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;address&amp;#96; text,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;bp_attention&amp;#96; tinyint(4) NOT NULL DEFAULT &amp;#39;0&amp;#39;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;birthday&amp;#96; varchar(10) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_create_time&amp;#96; datetime NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_creator&amp;#96; bigint(20) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_deleted&amp;#96; bit(1) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;domicile&amp;#96; text,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;family_relation&amp;#96; varchar(2) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;bp_foreign&amp;#96; tinyint(4) NOT NULL DEFAULT &amp;#39;0&amp;#39;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;id_card&amp;#96; varchar(30) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;bp_id_card_image&amp;#96; longtext,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;id_type&amp;#96; varchar(2) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;bp_image&amp;#96; longtext,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;marital_status&amp;#96; varchar(2) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_modifier&amp;#96; bigint(20) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;t_modify_time&amp;#96; datetime NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;name&amp;#96; varchar(50) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;nation&amp;#96; varchar(16) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;occupation&amp;#96; varchar(30) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;phone&amp;#96; varchar(20) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;political_status&amp;#96; varchar(2) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;province_id&amp;#96; bigint(20) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;sex&amp;#96; varchar(2) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;age&amp;#96; int(11) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;company_address&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;company_name&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;culture&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;id_card_validity&amp;#96; varchar(255) DEFAULT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;nationality&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#96;position&amp;#96; varchar(255) NOT NULL,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  PRIMARY KEY (&amp;#96;id&amp;#96;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  UNIQUE KEY &amp;#96;base_person_uindex&amp;#96; (&amp;#96;id_card&amp;#96;) USING BTREE&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;) ENGINE&amp;#x3D;InnoDB DEFAULT CHARSET&amp;#x3D;utf8;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="http://similarsu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="mysql" scheme="http://similarsu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/"/>
+    
+    
+    <category term="mysql" scheme="http://similarsu.github.io/tags/mysql/"/>
+    
+    <category term="全文检索" scheme="http://similarsu.github.io/tags/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>chrome80与cookie的二三事</title>
+    <link href="http://similarsu.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/chrome/chrome80%E4%B8%8Ecookie%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
+    <id>http://similarsu.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/chrome/chrome80%E4%B8%8Ecookie%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/</id>
+    <published>2020-03-23T06:16:02.000Z</published>
+    <updated>2020-03-23T06:16:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前生今世"><a href="#前生今世" class="headerlink" title="前生今世"></a>前生今世</h2><p><a href="https://blog.chromium.org/2019/10/developers-get-ready-for-new.html">https://blog.chromium.org/2019/10/developers-get-ready-for-new.html</a></p><h2 id="暗渡陈仓"><a href="#暗渡陈仓" class="headerlink" title="暗渡陈仓"></a>暗渡陈仓</h2><p><strong>注：仅针对跨域问题</strong></p><h3 id="暴力法（简单）"><a href="#暴力法（简单）" class="headerlink" title="暴力法（简单）"></a>暴力法（简单）</h3><ul><li><p>打开浏览器，在地址栏中输入chrome://flags</p></li><li><p>修改设置</p></li></ul><img src="/%E6%B5%8F%E8%A7%88%E5%99%A8/chrome/chrome80%E4%B8%8Ecookie%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/chrome-samesite.png" class=""><span id="more"></span><h3 id="推荐法（复杂）"><a href="#推荐法（复杂）" class="headerlink" title="推荐法（复杂）"></a>推荐法（复杂）</h3><p><strong>主要是后台服务进行修改</strong></p><ul><li>cookie 修改</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在cookie值中加入; SameSite&#x3D;None; Secure&#x3D;true</span><br></pre></td></tr></table></figure><ul><li>http改为https</li></ul><h3 id="半残法（不确定）"><a href="#半残法（不确定）" class="headerlink" title="半残法（不确定）"></a>半残法（不确定）</h3><p><strong>主要是后台服务进行修改</strong></p><ul><li>cookie 修改</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在cookie值中加入; SameSite&#x3D;None</span><br></pre></td></tr></table></figure><p><strong>经测试，部分版本的80浏览器可以起效，不推荐使用</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前生今世&quot;&gt;&lt;a href=&quot;#前生今世&quot; class=&quot;headerlink&quot; title=&quot;前生今世&quot;&gt;&lt;/a&gt;前生今世&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://blog.chromium.org/2019/10/developers-get-ready-for-new.html&quot;&gt;https://blog.chromium.org/2019/10/developers-get-ready-for-new.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;暗渡陈仓&quot;&gt;&lt;a href=&quot;#暗渡陈仓&quot; class=&quot;headerlink&quot; title=&quot;暗渡陈仓&quot;&gt;&lt;/a&gt;暗渡陈仓&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;注：仅针对跨域问题&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;暴力法（简单）&quot;&gt;&lt;a href=&quot;#暴力法（简单）&quot; class=&quot;headerlink&quot; title=&quot;暴力法（简单）&quot;&gt;&lt;/a&gt;暴力法（简单）&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;打开浏览器，在地址栏中输入chrome://flags&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改设置&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;/%E6%B5%8F%E8%A7%88%E5%99%A8/chrome/chrome80%E4%B8%8Ecookie%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/chrome-samesite.png&quot; class=&quot;&quot;&gt;</summary>
+    
+    
+    
+    <category term="浏览器" scheme="http://similarsu.github.io/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+    <category term="chrome" scheme="http://similarsu.github.io/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/chrome/"/>
+    
+    
+    <category term="chrome" scheme="http://similarsu.github.io/tags/chrome/"/>
+    
+    <category term="80" scheme="http://similarsu.github.io/tags/80/"/>
+    
+    <category term="cookie" scheme="http://similarsu.github.io/tags/cookie/"/>
+    
+    <category term="安全" scheme="http://similarsu.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OKR入门</title>
+    <link href="http://similarsu.github.io/%E7%AE%A1%E7%90%86/OKR/OKR%E5%85%A5%E9%97%A8/"/>
+    <id>http://similarsu.github.io/%E7%AE%A1%E7%90%86/OKR/OKR%E5%85%A5%E9%97%A8/</id>
+    <published>2020-02-10T00:38:09.000Z</published>
+    <updated>2020-02-10T00:38:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">是一套明确和跟踪目标及其完成情况的管理工具和方法。</span><br></pre></td></tr></table></figure><h2 id="周期"><a href="#周期" class="headerlink" title="周期"></a>周期</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OKR在执行过程主要以季度为周期来进行管理。</span><br></pre></td></tr></table></figure><img src="/%E7%AE%A1%E7%90%86/OKR/OKR%E5%85%A5%E9%97%A8/1.webp" class=""><span id="more"></span><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在季度初期开「OKR会议」，「确定OKR」，「公示OKR」，中间会进行跟踪状态目标，季度末会进行反思复盘，进行打分等等操作</span><br></pre></td></tr></table></figure><h2 id="PDCA"><a href="#PDCA" class="headerlink" title="PDCA"></a>PDCA</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计划，执行，检查，处理</span><br></pre></td></tr></table></figure><h2 id="适用"><a href="#适用" class="headerlink" title="适用"></a>适用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OKR更适合那种大方向性，那种不易于考核的团队，比如研发，业务支撑团队</span><br></pre></td></tr></table></figure><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><ul><li><a href="https://www.jianshu.com/p/09c6d7d89175">https://www.jianshu.com/p/09c6d7d89175</a></li><li><a href="http://www.sohu.com/a/318366407_404355">http://www.sohu.com/a/318366407_404355</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;是一套明确和跟踪目标及其完成情况的管理工具和方法。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;周期&quot;&gt;&lt;a href=&quot;#周期&quot; class=&quot;headerlink&quot; title=&quot;周期&quot;&gt;&lt;/a&gt;周期&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;OKR在执行过程主要以季度为周期来进行管理。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;img src=&quot;/%E7%AE%A1%E7%90%86/OKR/OKR%E5%85%A5%E9%97%A8/1.webp&quot; class=&quot;&quot;&gt;</summary>
+    
+    
+    
+    <category term="管理" scheme="http://similarsu.github.io/categories/%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="OKR" scheme="http://similarsu.github.io/categories/%E7%AE%A1%E7%90%86/OKR/"/>
+    
+    
+    <category term="入门" scheme="http://similarsu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="管理" scheme="http://similarsu.github.io/tags/%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="okr" scheme="http://similarsu.github.io/tags/okr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gradle中dependencies知多少</title>
+    <link href="http://similarsu.github.io/%E6%9E%84%E5%BB%BA/gradle/gradle%E4%B8%ADdependencies%E7%9F%A5%E5%A4%9A%E5%B0%91/"/>
+    <id>http://similarsu.github.io/%E6%9E%84%E5%BB%BA/gradle/gradle%E4%B8%ADdependencies%E7%9F%A5%E5%A4%9A%E5%B0%91/</id>
+    <published>2019-11-19T00:38:09.000Z</published>
+    <updated>2019-11-19T00:38:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a><a href="https://docs.gradle.org/current/userguide/dependency_management_terminology.html">术语</a></h2><h2 id="scope"><a href="#scope" class="headerlink" title="scope"></a>scope</h2><p><strong><a href="https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_plugin_and_dependency_management">java plugin参考文档</a></strong></p><ul><li>implementation</li><li>compile/api</li><li>compileOnly/provided</li><li>runtimeOnly</li></ul><span id="more"></span><h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><ul><li>A&lt;–compile–B&lt;–**–C</li></ul><p><strong>B、C模块都可使用A模块</strong></p><ul><li>A&lt;–implementation–B&lt;–**–C</li></ul><p><strong>B模块可以使用A模块，C模块不可使用A模块</strong></p><ul><li>A&lt;–compileOnly–B&lt;–**–C</li></ul><p><strong>B模块可以使用A模块，C模块不可使用A模块</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;术语&quot;&gt;&lt;a href=&quot;#术语&quot; class=&quot;headerlink&quot; title=&quot;术语&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://docs.gradle.org/current/userguide/dependency_management_terminology.html&quot;&gt;术语&lt;/a&gt;&lt;/h2&gt;&lt;h2 id=&quot;scope&quot;&gt;&lt;a href=&quot;#scope&quot; class=&quot;headerlink&quot; title=&quot;scope&quot;&gt;&lt;/a&gt;scope&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_plugin_and_dependency_management&quot;&gt;java plugin参考文档&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;implementation&lt;/li&gt;
+&lt;li&gt;compile/api&lt;/li&gt;
+&lt;li&gt;compileOnly/provided&lt;/li&gt;
+&lt;li&gt;runtimeOnly&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="构建" scheme="http://similarsu.github.io/categories/%E6%9E%84%E5%BB%BA/"/>
+    
+    <category term="gradle" scheme="http://similarsu.github.io/categories/%E6%9E%84%E5%BB%BA/gradle/"/>
+    
+    
+    <category term="gradel" scheme="http://similarsu.github.io/tags/gradel/"/>
+    
+    <category term="dependencies" scheme="http://similarsu.github.io/tags/dependencies/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>restful最佳实践</title>
+    <link href="http://similarsu.github.io/%E8%AE%BE%E8%AE%A1/restful/restful%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://similarsu.github.io/%E8%AE%BE%E8%AE%A1/restful/restful%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</id>
+    <published>2019-11-07T08:03:29.000Z</published>
+    <updated>2019-11-07T08:03:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="使用名词，而不是动词"><a href="#使用名词，而不是动词" class="headerlink" title="使用名词，而不是动词"></a>使用名词，而不是动词</h2><p><strong>推荐</strong></p><table><thead><tr><th>资源</th><th>GET/read</th><th>POST/create</th><th>PUT/update</th><th>DELETE</th></tr></thead><tbody><tr><td>/cars</td><td>获取所有车辆信息</td><td>新建一辆车</td><td>批量更新车</td><td>删除所有车</td></tr><tr><td>/cars/711</td><td>获取某一指定车辆</td><td>不允许(405)</td><td>更新某一指定车辆</td><td>删除某一特定车辆</td></tr></tbody></table><p><strong>不推荐</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;getAllCars</span><br><span class="line">&#x2F;createNewCar</span><br><span class="line">&#x2F;deleteAllRedCar</span><br></pre></td></tr></table></figure><h2 id="不应该使用GET和查询参数改变状态"><a href="#不应该使用GET和查询参数改变状态" class="headerlink" title="不应该使用GET和查询参数改变状态"></a>不应该使用GET和查询参数改变状态</h2><p><strong>推荐</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用POST、PUT、DELETE替代GET</span><br></pre></td></tr></table></figure><p><strong>不推荐</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET &#x2F;users&#x2F;711?active</span><br><span class="line">GET &#x2F;users&#x2F;711&#x2F;active</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="使用名词的复数形式"><a href="#使用名词的复数形式" class="headerlink" title="使用名词的复数形式"></a>使用名词的复数形式</h2><p><strong>不要混合使用名词的单数和复数。仅仅使用名词的复数形式代表所有资源</strong></p><p><strong>推荐</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;cars</span><br><span class="line">&#x2F;users</span><br><span class="line">&#x2F;products</span><br><span class="line">&#x2F;settings</span><br></pre></td></tr></table></figure><p><strong>不推荐</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;car</span><br><span class="line">&#x2F;user</span><br><span class="line">&#x2F;product</span><br><span class="line">&#x2F;setting</span><br></pre></td></tr></table></figure><h2 id="使用子资源进行关联"><a href="#使用子资源进行关联" class="headerlink" title="使用子资源进行关联"></a>使用子资源进行关联</h2><p><strong>如果资源与另一资源相关，使用子资源</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;获取开711车的所有驾驶员信息</span><br><span class="line">GET &#x2F;cars&#x2F;711&#x2F;drivers</span><br><span class="line">&#x2F;&#x2F;获取开711车的驾驶员为4的信息</span><br><span class="line">GET &#x2F;cars&#x2F;711&#x2F;drivers&#x2F;4</span><br></pre></td></tr></table></figure><h2 id="使用HTTP请求-响应头序列化格式"><a href="#使用HTTP请求-响应头序列化格式" class="headerlink" title="使用HTTP请求/响应头序列化格式"></a>使用HTTP请求/响应头序列化格式</h2><p><strong>用于规定服务端与客户端双方的通信格式</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Content-Type 定义请求格式</span><br><span class="line">Accept: 定义响应格式</span><br></pre></td></tr></table></figure><h2 id="使用HETEOAS"><a href="#使用HETEOAS" class="headerlink" title="使用HETEOAS"></a>使用HETEOAS</h2><p><strong>Hypermedia as the Engine of Application State</strong></p><p><strong>在API中使用超链接创建更好的导航</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;id&quot;: 711,</span><br><span class="line">  &quot;manufacturer&quot;: &quot;bmw&quot;,</span><br><span class="line">  &quot;model&quot;: &quot;X5&quot;,</span><br><span class="line">  &quot;seats&quot;: 5,</span><br><span class="line">  &quot;drivers&quot;: [</span><br><span class="line">   &#123;</span><br><span class="line">    &quot;id&quot;: &quot;23&quot;,</span><br><span class="line">    &quot;name&quot;: &quot;Stefan Jauker&quot;,</span><br><span class="line">    &quot;links&quot;: [</span><br><span class="line">     &#123;</span><br><span class="line">     &quot;rel&quot;: &quot;self&quot;,</span><br><span class="line">     &quot;href&quot;: &quot;&#x2F;api&#x2F;v1&#x2F;drivers&#x2F;23&quot;</span><br><span class="line">    &#125;</span><br><span class="line">   ]</span><br><span class="line">  &#125;</span><br><span class="line"> ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="为集合提供筛选，排序，字段选择和分页"><a href="#为集合提供筛选，排序，字段选择和分页" class="headerlink" title="为集合提供筛选，排序，字段选择和分页"></a>为集合提供筛选，排序，字段选择和分页</h2><ul><li>筛选</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET &#x2F;cars?color&#x3D;red &#x2F;&#x2F;获取颜色为红色的车辆列表</span><br><span class="line">GET &#x2F;cars?seats&lt;&#x3D;2 &#x2F;&#x2F;获取座位数不超过2个的车辆列表</span><br></pre></td></tr></table></figure><ul><li>排序</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET &#x2F;cars?sort&#x3D;-manufactorer,+model &#x2F;&#x2F;获取根据制造商降序、型号升序排序的车辆列表</span><br></pre></td></tr></table></figure><ul><li><p>字段选择</p><p><strong>客户端不需要展示一个资源的所有属性，让客户端可以自己选择返回的字段，减少网络流量，提高速度</strong></p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET &#x2F;cars?fields&#x3D;manufacturer,model,id,color</span><br></pre></td></tr></table></figure><ul><li>分页</li></ul><p><strong>使用limit和offset，默认值limit=20,offset=0</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET &#x2F;cars?offset&#x3D;10&amp;limit&#x3D;5</span><br></pre></td></tr></table></figure><p><strong>总条数使用HTTP头：X-Total-Count</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X-Total-Count: 100</span><br></pre></td></tr></table></figure><p><strong>上一页下一页链接使用HTTP头：Link,而不是自己构建链接</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Link: &lt;http:&#x2F;&#x2F;127.0.0.1&#x2F;api&#x2F;v1&#x2F;cars?offset&#x3D;15&amp;limit&#x3D;5&gt;; rel&#x3D;&quot;next&quot;,</span><br><span class="line">&lt;http:&#x2F;&#x2F;127.0.0.1&#x2F;api&#x2F;v1&#x2F;cars?offset&#x3D;50&amp;limit&#x3D;3&gt;; rel&#x3D;&quot;last&quot;,</span><br><span class="line">&lt;http:&#x2F;&#x2F;127.0.0.1&#x2F;api&#x2F;v1&#x2F;cars?offset&#x3D;0&amp;limit&#x3D;5&gt;; rel&#x3D;&quot;first&quot;,</span><br><span class="line">&lt;http:&#x2F;&#x2F;127.0.0.1&#x2F;api&#x2F;v1&#x2F;cars?offset&#x3D;5&amp;limit&#x3D;5&gt;; rel&#x3D;&quot;prev&quot;</span><br></pre></td></tr></table></figure><h2 id="版本化API"><a href="#版本化API" class="headerlink" title="版本化API"></a>版本化API</h2><p><strong>将API版本设为必选，不发布未版本控制的API。使用简单的序数，并在前面加上v，避免使用点表示法（2.5）</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;api&#x2F;v1</span><br></pre></td></tr></table></figure><h2 id="使用HTTP状态玛表示错误"><a href="#使用HTTP状态玛表示错误" class="headerlink" title="使用HTTP状态玛表示错误"></a>使用HTTP状态玛表示错误</h2><p><strong>码表,使用一些常用的状态码，而非全部</strong></p><table><thead><tr><th>状态码</th><th>描述</th><th>解释</th></tr></thead><tbody><tr><td>200</td><td>OK</td><td>一切正常</td></tr><tr><td>201</td><td>OK</td><td>创建新资源</td></tr><tr><td>204</td><td>OK</td><td>资源被成功删除</td></tr><tr><td>304</td><td>Not Modified</td><td>客户端可以使用缓存数据</td></tr><tr><td>400</td><td>Bad Request</td><td>无效请求，确切的错误在错误返回中说明。如，“JSON是无效”</td></tr><tr><td>401</td><td>Unauthorized</td><td>要求用户验证</td></tr><tr><td>403</td><td>Forbidden</td><td>服务端识别该请求，但拒绝或无权访问</td></tr><tr><td>404</td><td>Not found</td><td>无对应的URI</td></tr><tr><td>422</td><td>Unprocessable Entity</td><td>服务器无法处理实体，例如，图像无法格式化或缺少必填字段</td></tr><tr><td>500</td><td>Internal Server Error</td><td>开发人员应避免此错误。如果错误被全局捕捉到，堆栈信息应记录在日志中，并且不应该写入到响应体中</td></tr></tbody></table><p><strong>错误信息</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;errors&quot;: [</span><br><span class="line">   &#123;</span><br><span class="line">    &quot;userMessage&quot;: &quot;Sorry, the requested resource does not exist&quot;,</span><br><span class="line">    &quot;internalMessage&quot;: &quot;No car found in the database&quot;,</span><br><span class="line">    &quot;code&quot;: 34,</span><br><span class="line">    &quot;moreInfo&quot;: &quot;http:&#x2F;&#x2F;127.0.0.1&#x2F;api&#x2F;v1&#x2F;errors&#x2F;12345&quot;</span><br><span class="line">   &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/">https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/</a></li><li><a href="https://www.snyxius.com/21-best-practices-designing-launching-restful-api/">https://www.snyxius.com/21-best-practices-designing-launching-restful-api/</a></li><li><a href="https://www.snyxius.com/guide-to-rest-api-best-practices/#.V6LdV9J95dg">https://www.snyxius.com/guide-to-rest-api-best-practices/#.V6LdV9J95dg</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;使用名词，而不是动词&quot;&gt;&lt;a href=&quot;#使用名词，而不是动词&quot; class=&quot;headerlink&quot; title=&quot;使用名词，而不是动词&quot;&gt;&lt;/a&gt;使用名词，而不是动词&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;推荐&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;资源&lt;/th&gt;
+&lt;th&gt;GET/read&lt;/th&gt;
+&lt;th&gt;POST/create&lt;/th&gt;
+&lt;th&gt;PUT/update&lt;/th&gt;
+&lt;th&gt;DELETE&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;/cars&lt;/td&gt;
+&lt;td&gt;获取所有车辆信息&lt;/td&gt;
+&lt;td&gt;新建一辆车&lt;/td&gt;
+&lt;td&gt;批量更新车&lt;/td&gt;
+&lt;td&gt;删除所有车&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/cars/711&lt;/td&gt;
+&lt;td&gt;获取某一指定车辆&lt;/td&gt;
+&lt;td&gt;不允许(405)&lt;/td&gt;
+&lt;td&gt;更新某一指定车辆&lt;/td&gt;
+&lt;td&gt;删除某一特定车辆&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;不推荐&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x2F;getAllCars&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x2F;createNewCar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x2F;deleteAllRedCar&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;不应该使用GET和查询参数改变状态&quot;&gt;&lt;a href=&quot;#不应该使用GET和查询参数改变状态&quot; class=&quot;headerlink&quot; title=&quot;不应该使用GET和查询参数改变状态&quot;&gt;&lt;/a&gt;不应该使用GET和查询参数改变状态&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;推荐&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;使用POST、PUT、DELETE替代GET&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;不推荐&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;GET &amp;#x2F;users&amp;#x2F;711?active&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;GET &amp;#x2F;users&amp;#x2F;711&amp;#x2F;active&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="设计" scheme="http://similarsu.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="restful" scheme="http://similarsu.github.io/categories/%E8%AE%BE%E8%AE%A1/restful/"/>
+    
+    
+    <category term="restful" scheme="http://similarsu.github.io/tags/restful/"/>
+    
+    <category term="最佳" scheme="http://similarsu.github.io/tags/%E6%9C%80%E4%BD%B3/"/>
+    
+    <category term="实践" scheme="http://similarsu.github.io/tags/%E5%AE%9E%E8%B7%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>protobuf3入门指南</title>
+    <link href="http://similarsu.github.io/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/protobuf3/protobuf3%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"/>
+    <id>http://similarsu.github.io/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/protobuf3/protobuf3%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</id>
+    <published>2019-11-04T01:34:13.000Z</published>
+    <updated>2019-11-04T01:34:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="风格"><a href="#风格" class="headerlink" title="风格"></a>风格</h2><h3 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h3><ul><li>保持行长为80个字符</li><li>使用2个空格缩进</li></ul><h3 id="文件名"><a href="#文件名" class="headerlink" title="文件名"></a>文件名</h3><p>lower_snake_case.proto</p><h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><ul><li>license</li><li>文件预览</li><li>syntax（指定使用2还是3版本）</li><li>package(包名)</li><li>imports(导入)</li><li>文件相关内容(如Message等)</li><li>其他内容</li></ul><h3 id="目录结构与包名"><a href="#目录结构与包名" class="headerlink" title="目录结构与包名"></a>目录结构与包名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">名称应为小写，并且应与目录层次结构相对应。例如，如果文件在其中my&#x2F;package&#x2F;，则软件包名称应为my.package。</span><br></pre></td></tr></table></figure><span id="more"></span><h3 id="Message和字段名"><a href="#Message和字段名" class="headerlink" title="Message和字段名"></a>Message和字段名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Message使用CamelCase(大写字母开头)</span><br><span class="line">字段名使用underscore_separated_names</span><br><span class="line"></span><br><span class="line">message SongServerRequest &#123;</span><br><span class="line">  required string song_name &#x3D; 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">如果字段名中含有数字，数字应和单词和在一起，而非通过下划线分开</span><br><span class="line">如使用song_name1替换song_name_1</span><br></pre></td></tr></table></figure><h3 id="重复字段"><a href="#重复字段" class="headerlink" title="重复字段"></a>重复字段</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用复数的形式代表重复字段</span><br><span class="line"></span><br><span class="line">repeated string keys &#x3D; 1;</span><br><span class="line">repeated MyMessage accounts &#x3D; 17;</span><br></pre></td></tr></table></figure><h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">枚举类型名称使用CamelCase（大写字母开头）</span><br><span class="line">每个枚举值应该以分号结束,而不是一个逗号</span><br><span class="line">优先为枚举值添加前缀，而不是将其包含在封闭消息中。</span><br><span class="line">零值枚举应带有后缀。</span><br><span class="line"></span><br><span class="line">enum Foo &#123;</span><br><span class="line">  FOO_UNSPECIFIED &#x3D; 0;</span><br><span class="line">  FOO_FIRST_VALUE &#x3D; 1;</span><br><span class="line">  FOO_SECOND_VALUE &#x3D; 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">使用CamelCase（以大写字母开头）作为服务名称和任何RPC方法名称</span><br><span class="line"></span><br><span class="line">service FooService &#123;</span><br><span class="line">  rpc GetSomething(FooRequest) returns (FooResponse);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="类型映射"><a href="#类型映射" class="headerlink" title="类型映射"></a>类型映射</h3><table><thead><tr><th>proto type</th><th>java type</th><th>备注</th></tr></thead><tbody><tr><td>double</td><td>double</td><td></td></tr><tr><td>float</td><td>float</td><td></td></tr><tr><td>int32</td><td>int</td><td>使用可变长度编码。负数编码效率低下–如果您的字段可能具有负值，请改用sint32</td></tr><tr><td>int64</td><td>long</td><td>使用可变长度编码。负数编码效率低下–如果您的字段可能具有负值，请改用sint64。</td></tr><tr><td>uint32</td><td>int</td><td>使用可变长度编码。</td></tr><tr><td>uint64</td><td>long</td><td>使用可变长度编码。</td></tr><tr><td>sint32</td><td>int</td><td>使用可变长度编码。有符号的int值。与常规int32相比，它们更有效地编码负数。</td></tr><tr><td>sint64</td><td>long</td><td>使用可变长度编码。有符号的int值。与常规int64相比，它们更有效地编码负数。</td></tr><tr><td>fixed32</td><td>int</td><td>始终为四个字节。如果值通常大于2^28，则比uint32更有效。</td></tr><tr><td>fixed64</td><td>long</td><td>始终为八个字节。如果值通常大于2^56，则比uint64更有效。</td></tr><tr><td>sfixed32</td><td>int</td><td>始终为四个字节。</td></tr><tr><td>sfixed64</td><td>long</td><td>始终为八个字节。</td></tr><tr><td>bool</td><td>boolean</td><td></td></tr><tr><td>string</td><td>String</td><td>字符串必须始终包含UTF-8编码或7位ASCII文本，并且不能超过2^32</td></tr><tr><td>bytes</td><td>ByteString</td><td>可以包含不超过2^32的任意字节序列</td></tr></tbody></table><h3 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h3><ul><li>string，默认值为空字符串</li><li>bytes，默认值为空字节</li><li>bool，默认值为false</li><li>numeric，默认值为0</li><li>enums, 第一个定义的枚举值，0</li><li>message,未设置，跟开发语言有关</li><li>repeated，默认值为空</li></ul><h3 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">message SearchRequest &#123;</span><br><span class="line">  string query &#x3D; 1;</span><br><span class="line">  int32 page_number &#x3D; 2;</span><br><span class="line">  int32 result_per_page &#x3D; 3;</span><br><span class="line">  enum Corpus &#123;</span><br><span class="line">    UNIVERSAL &#x3D; 0;</span><br><span class="line">    WEB &#x3D; 1;</span><br><span class="line">    IMAGES &#x3D; 2;</span><br><span class="line">    LOCAL &#x3D; 3;</span><br><span class="line">    NEWS &#x3D; 4;</span><br><span class="line">    PRODUCTS &#x3D; 5;</span><br><span class="line">    VIDEO &#x3D; 6;</span><br><span class="line">  &#125;</span><br><span class="line">  Corpus corpus &#x3D; 4;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>每个枚举类型定义必须包含为0的元素且必须放置在首位</strong></p><ul><li><p>allow_alias：取别名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;the right way</span><br><span class="line">enum EnumAllowingAlias &#123;</span><br><span class="line">  option allow_alias &#x3D; true;</span><br><span class="line">  UNKNOWN &#x3D; 0;</span><br><span class="line">  STARTED &#x3D; 1;</span><br><span class="line">  RUNNING &#x3D; 1;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;the error way</span><br><span class="line">enum EnumNotAllowingAlias &#123;</span><br><span class="line">  UNKNOWN &#x3D; 0;</span><br><span class="line">  STARTED &#x3D; 1;</span><br><span class="line">  &#x2F;&#x2F; RUNNING &#x3D; 1;  &#x2F;&#x2F; Uncommenting this line will cause a compile error inside Google and a warning message outside.</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p><strong>取值范围32-bit integer</strong><br><strong>使用可变长度编码，负数编码效率低下，不推荐使用</strong><br><strong>可定义在message中，也可在message外，message中可通过MessageType.EnumType使用</strong></p><ul><li>保留值</li></ul><p><strong>如果通过完全删除枚举条目或将其注释掉来更新枚举类型，则将来的用户在自己对类型进行更新时可以重用数值。如果他们以后加载旧版本的proto，可能会导致严重的问题.proto，包括数据损坏，隐私错误等。确保不会发生这种情况的一种方法是，将已删除的条目的数字值或名称，可能导致JSON序列化的问题，指定为reserved</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; max代表最大值</span><br><span class="line">enum Foo &#123;</span><br><span class="line">  reserved 2, 15, 9 to 11, 40 to max;</span><br><span class="line">  reserved &quot;FOO&quot;, &quot;BAR&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;数值和名称不能放在同个reserved中</span><br></pre></td></tr></table></figure><h3 id="使用其他类型message"><a href="#使用其他类型message" class="headerlink" title="使用其他类型message"></a>使用其他类型message</h3><ul><li>同一个.proto中</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">message SearchResponse &#123;</span><br><span class="line">  repeated Result results &#x3D; 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">message Result &#123;</span><br><span class="line">  string url &#x3D; 1;</span><br><span class="line">  string title &#x3D; 2;</span><br><span class="line">  repeated string snippets &#x3D; 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>导入其他文件，即不同的.proto文件</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &quot;myproject&#x2F;other_protos.proto&quot;;</span><br></pre></td></tr></table></figure><ul><li><p>虚拟proto</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;old.proto被多个文件引用，现在old.proto被移到其它目录中，原先引用该目录的</span><br><span class="line">&#x2F;&#x2F;文件都得修改，这样比较麻烦，可通过虚拟proto的方式，将旧的文件引导到新的位置上</span><br><span class="line">&#x2F;&#x2F; new.proto</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;old.proto</span><br><span class="line">import public &quot;new.proto&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;client.proto</span><br><span class="line">import &quot;old.proto&quot;</span><br></pre></td></tr></table></figure></li></ul><p><strong>搜索路径通过–proto_path指定，未指定为当前编译调用的位置</strong></p><ul><li>proto2 message type</li></ul><p>  <strong>可以直接在proto3中导入并使用proto2的message Type，但是枚举例外</strong></p><h3 id="内部类型"><a href="#内部类型" class="headerlink" title="内部类型"></a>内部类型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">message SearchResponse &#123;</span><br><span class="line">  message Result &#123;</span><br><span class="line">    string url &#x3D; 1;</span><br><span class="line">    string title &#x3D; 2;</span><br><span class="line">    repeated string snippets &#x3D; 3;</span><br><span class="line">  &#125;</span><br><span class="line">  repeated Result results &#x3D; 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>可通过Parent.Type的方式使用</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">message SomeOtherMessage &#123;</span><br><span class="line">  SearchResponse.Result result &#x3D; 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="更新Message"><a href="#更新Message" class="headerlink" title="更新Message"></a>更新Message</h3><ul><li>不要更改任何现有字段的字段编号</li><li> 添加新字段后，可以使用新的代码解析旧格式序列化的数据，因记住元素的默认值，同样旧的代码也可解析新格式序列化的数据，忽略新字段</li><li> 如果该字段编码在新的文件中不在使用，可以移除该字段。但为了未来其它人员误用该数值，可能通过重命名字段（如加上前缀OBSOLETE_）,或使该数值保留</li><li> int32, uint32, int64, uint64,和 bool是兼容的</li><li> sint32和sint64兼容，但与其它整数不兼容</li><li> 只要bytes是有效的utf-8，string和bytes是兼容的</li><li> 如果bytes包含message的版本，内嵌message和bytes是兼容的</li><li> fixed32 和sfixed32,fixed64和sfixed64是兼容的</li><li> enum 与int32, uint32, int64,和uint64是兼容的，当时须注意不同的客户端反序列化的处理是不一样的</li><li> 单值改为新的oneof是安全的且二进制是兼容的。如果确认一次中对多个字段的设值不超过一个，那么移动多个字段到新的oneof是安全的。移动任一字段到已存在的oneof中是不安全</li></ul><h3 id="未知字段"><a href="#未知字段" class="headerlink" title="未知字段"></a>未知字段</h3><p><strong>序列化数据中代表的字段解析器不能识别</strong></p><h3 id="Any"><a href="#Any" class="headerlink" title="Any"></a>Any</h3><p><strong>须要导入google/protobuf/any.proto</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import &quot;google&#x2F;protobuf&#x2F;any.proto&quot;;</span><br><span class="line"></span><br><span class="line">message ErrorStatus &#123;</span><br><span class="line">  string message &#x3D; 1;</span><br><span class="line">  repeated google.protobuf.Any details &#x3D; 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>可以让你不用定义就像内嵌类型一样使用</strong></p><h3 id="oneof"><a href="#oneof" class="headerlink" title="oneof"></a>oneof</h3><p><strong>根据语言不同，可通过case()或WhiceOneof()校验oneof设置了哪个字段</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">message SampleMessage &#123;</span><br><span class="line">  oneof test_oneof &#123;</span><br><span class="line">    string name &#x3D; 4;</span><br><span class="line">    SubMessage sub_message &#x3D; 9;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>不能在oneof中使用repeated</strong></p><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul><li>设置oneof中莫一字段的值会自动清除oneof其它成员，即只有最后一次有效</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SampleMessage message;</span><br><span class="line">message.set_name(&quot;name&quot;);</span><br><span class="line">CHECK(message.has_name());</span><br><span class="line">message.mutable_sub_message();   &#x2F;&#x2F; Will clear name field.</span><br><span class="line">CHECK(!message.has_name());</span><br></pre></td></tr></table></figure><ul><li>如果解析时碰到oneof中有多个成员，仅最后一个会被解析</li><li>oneof不可使用repeated</li><li>可以使用反射API</li><li>如果oneof的某个成员设置了默认值，该值将会被序列化</li><li>使用c++时，注意你的代码不会造成崩溃</li><li>使用c++时，通过swap可以交换两个message的oneof</li></ul><h4 id="向后兼容问题"><a href="#向后兼容问题" class="headerlink" title="向后兼容问题"></a>向后兼容问题</h4><p><strong>需要小心新增或删除oneof字段</strong></p><p><strong>标签重用</strong></p><h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map &lt; key_type ，value_type &gt; map_field &#x3D; N ;</span><br><span class="line">#key_type可以是任何的整数或字符串（除了浮点型和字节型，枚举是无效的）</span><br><span class="line">#value_type可以是任何类型（除了map）</span><br></pre></td></tr></table></figure><p><strong>示例</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map&lt;string, Project&gt; projects &#x3D; 3;</span><br></pre></td></tr></table></figure><ul><li>map字段不能repeated</li><li>map key和value排序是不确定的</li><li>序列化时map时根据key进行排序的。数值型key根据数值排序</li><li>在java中，如果value未设定，将使用默认值</li></ul><h3 id="Packages"><a href="#Packages" class="headerlink" title="Packages"></a>Packages</h3><p><strong>可以在.proto文件中使用package说明符，防止消息类型冲突</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package foo.bar;</span><br><span class="line">message Open &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">message Foo &#123;</span><br><span class="line">  ...</span><br><span class="line">  foo.bar.Open open &#x3D; 1;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>在JAVA中，除非在.proto文件中明确指定了option java_package，否则将使用package作为java的包名</strong></p><h3 id="Service-1"><a href="#Service-1" class="headerlink" title="Service"></a>Service</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service SearchService &#123;</span><br><span class="line">  rpc Search (SearchRequest) returns (SearchResponse);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="JSON-Mapping"><a href="#JSON-Mapping" class="headerlink" title="JSON Mapping"></a>JSON Mapping</h3><p><strong>proto3开始支持</strong></p><ul><li>json转proto时，如果值不存在或为空，则使用默认值</li><li>proto转json时，忽略默认值的字段节省空间</li></ul><table><thead><tr><th>proto3</th><th>JSON</th><th>JSON example</th><th>Notes</th></tr></thead><tbody><tr><td>message</td><td>object</td><td>{“fooBar”: v,”g”: null,…}</td><td>json对象，字段变成json对象的key且以驼峰形式</td></tr><tr><td>enum</td><td>string</td><td>“FOO_BAR”</td><td>枚举值的名</td></tr><tr><td>map&lt;K,V&gt;</td><td>object</td><td>{“k”: v, …}</td><td>所有键转化为字符串</td></tr><tr><td>repeated V</td><td>array</td><td>[v, …]</td><td>null 等价于 []</td></tr><tr><td>bool</td><td>true, false</td><td>true, false</td><td></td></tr><tr><td>string</td><td>string</td><td>“Hello World!”</td><td></td></tr><tr><td>bytes</td><td>base64 string</td><td>“YWJjMTIzIT8kKiYoKSctPUB+”</td><td>json值为base64编码的字符串</td></tr><tr><td>int32, fixed32, uint32</td><td>number</td><td>1, -10, 0</td><td>json值为十进制数值</td></tr><tr><td>int64, fixed64, uint64</td><td>string</td><td>“1”, “-10”</td><td>json值为十进制字符串</td></tr><tr><td>float, double</td><td>number</td><td>1.1, -10.0, 0, “NaN”, “Infinity”</td><td>json值为数值或特殊的字符串 “NaN”, “Infinity”, and “-Infinity”</td></tr><tr><td>Any</td><td>object</td><td>{“@type”: “url”, “f”: v, … }</td><td></td></tr><tr><td>Duration</td><td>string</td><td>“1.000340012s”, “1s”</td><td></td></tr><tr><td>Struct</td><td>object</td><td>{ … }</td><td>任一json对象</td></tr><tr><td>Wrapper types</td><td>various types</td><td>2, “2”, “foo”, true, “true”, null, 0, …</td><td>在JSON中使用与包装后的原始类型相同的表示形式，但null在数据转换和传输期间允许并保留该表示形式</td></tr><tr><td>FieldMask</td><td>string</td><td>“f.fooBar,h”</td><td></td></tr><tr><td>ListValue</td><td>array</td><td>[foo, bar, …]</td><td></td></tr><tr><td>Value</td><td>value</td><td></td><td>任一json值</td></tr><tr><td>NullValue</td><td>null</td><td></td><td></td></tr><tr><td>Empty</td><td>object</td><td>{}</td><td>一个空的json对象</td></tr></tbody></table><h4 id="可选项【proto转json输出】"><a href="#可选项【proto转json输出】" class="headerlink" title="可选项【proto转json输出】"></a>可选项【proto转json输出】</h4><ul><li>不省略具有默认值的字段，默认忽略</li><li>忽略未知字段，默认拒绝</li><li>使用字段名，默认lowerCamelCase</li><li>枚举值改为数值，默认字符串</li></ul><h3 id="option"><a href="#option" class="headerlink" title="option"></a>option</h3><p><strong>可在google/protobuf/descriptor.proto查看</strong></p><ul><li><p>文件级（顶级中，不再消息、枚举、服务定义内）</p><ul><li>java_package<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">option java_package &#x3D; &quot;com.example.foo&quot;;</span><br></pre></td></tr></table></figure></li><li>java_multiple_files</li><li>java_outer_classname（类名，如未定义，则使用proto文件名，foo_bar.proto=&gt;FooBar.java）</li><li>optimize_for（可以设置SPEED，CODE_SIZE或LITE_RUNTIME）<ul><li>SPEED,默认值，代码高度优化</li><li>CODE_SIZE,生成最少的类，基于反射实现，速度慢</li><li>LITE_RUNTIME依赖于libprotobuf-lite而非libprotobuf，一般用在受限平台上，如手机</li></ul></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">option optimize_for &#x3D; CODE_SIZE</span><br></pre></td></tr></table></figure></li><li><p>消息级（消息定义中）</p></li><li><p>字段级（字段定义中）</p><ul><li>deprecated（表明字段弃用，在Java中，成为@Deprecated注释，可以考虑使用保留语句替换）</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int32 old_field &#x3D; 6 [deprecated &#x3D; true];</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;风格&quot;&gt;&lt;a href=&quot;#风格&quot; class=&quot;headerlink&quot; title=&quot;风格&quot;&gt;&lt;/a&gt;风格&lt;/h2&gt;&lt;h3 id=&quot;文件格式&quot;&gt;&lt;a href=&quot;#文件格式&quot; class=&quot;headerlink&quot; title=&quot;文件格式&quot;&gt;&lt;/a&gt;文件格式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;保持行长为80个字符&lt;/li&gt;
+&lt;li&gt;使用2个空格缩进&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;文件名&quot;&gt;&lt;a href=&quot;#文件名&quot; class=&quot;headerlink&quot; title=&quot;文件名&quot;&gt;&lt;/a&gt;文件名&lt;/h3&gt;&lt;p&gt;lower_snake_case.proto&lt;/p&gt;
+&lt;h3 id=&quot;文件结构&quot;&gt;&lt;a href=&quot;#文件结构&quot; class=&quot;headerlink&quot; title=&quot;文件结构&quot;&gt;&lt;/a&gt;文件结构&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;license&lt;/li&gt;
+&lt;li&gt;文件预览&lt;/li&gt;
+&lt;li&gt;syntax（指定使用2还是3版本）&lt;/li&gt;
+&lt;li&gt;package(包名)&lt;/li&gt;
+&lt;li&gt;imports(导入)&lt;/li&gt;
+&lt;li&gt;文件相关内容(如Message等)&lt;/li&gt;
+&lt;li&gt;其他内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;目录结构与包名&quot;&gt;&lt;a href=&quot;#目录结构与包名&quot; class=&quot;headerlink&quot; title=&quot;目录结构与包名&quot;&gt;&lt;/a&gt;目录结构与包名&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;名称应为小写，并且应与目录层次结构相对应。例如，如果文件在其中my&amp;#x2F;package&amp;#x2F;，则软件包名称应为my.package。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="消息中间件" scheme="http://similarsu.github.io/categories/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    <category term="protobuf3" scheme="http://similarsu.github.io/categories/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/protobuf3/"/>
+    
+    
+    <category term="指南" scheme="http://similarsu.github.io/tags/%E6%8C%87%E5%8D%97/"/>
+    
+    <category term="入门" scheme="http://similarsu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="protobuf3" scheme="http://similarsu.github.io/tags/protobuf3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sqlite入门指南</title>
+    <link href="http://similarsu.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93/sqlite/sqlite%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"/>
+    <id>http://similarsu.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93/sqlite/sqlite%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</id>
+    <published>2019-09-10T08:55:48.000Z</published>
+    <updated>2019-09-10T08:55:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul><li>sqlite3</li></ul><h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><h3 id="登录数据库"><a href="#登录数据库" class="headerlink" title="登录数据库"></a>登录数据库</h3><p><strong><em>方式一</em></strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlite3 middleware.db</span><br></pre></td></tr></table></figure><p><strong>其中middleware.db为数据库文件名</strong></p><span id="more"></span><p><strong><em>方式二</em></strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 登录sqlite3控制台</span><br><span class="line">sqlite3</span><br><span class="line"># 打开数据库文件</span><br><span class="line">.open middleware.db</span><br></pre></td></tr></table></figure><h3 id="查看数据库中所有表"><a href="#查看数据库中所有表" class="headerlink" title="查看数据库中所有表"></a>查看数据库中所有表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#不要在后面加；</span><br><span class="line">.table</span><br></pre></td></tr></table></figure><h3 id="查看表结构"><a href="#查看表结构" class="headerlink" title="查看表结构"></a>查看表结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#不要在后面加；</span><br><span class="line">.schema user</span><br></pre></td></tr></table></figure><p><strong><em>user为表名</em></strong></p><h3 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.help</span><br></pre></td></tr></table></figure><p><strong>可通过该命令参看sqlite3支持的命令及使用</strong></p><h3 id="退出sqlite3控制台"><a href="#退出sqlite3控制台" class="headerlink" title="退出sqlite3控制台"></a>退出sqlite3控制台</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.quit</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;sqlite3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;常见命令&quot;&gt;&lt;a href=&quot;#常见命令&quot; class=&quot;headerlink&quot; title=&quot;常见命令&quot;&gt;&lt;/a&gt;常见命令&lt;/h2&gt;&lt;h3 id=&quot;登录数据库&quot;&gt;&lt;a href=&quot;#登录数据库&quot; class=&quot;headerlink&quot; title=&quot;登录数据库&quot;&gt;&lt;/a&gt;登录数据库&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;方式一&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sqlite3 middleware.db&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;其中middleware.db为数据库文件名&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="http://similarsu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="sqlite" scheme="http://similarsu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/sqlite/"/>
+    
+    
+    <category term="数据库" scheme="http://similarsu.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="指南" scheme="http://similarsu.github.io/tags/%E6%8C%87%E5%8D%97/"/>
+    
+    <category term="sqlite" scheme="http://similarsu.github.io/tags/sqlite/"/>
+    
+    <category term="入门" scheme="http://similarsu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大华jna映射表</title>
+    <link href="http://similarsu.github.io/jna/%E5%A4%A7%E5%8D%8Ejna%E6%98%A0%E5%B0%84%E8%A1%A8/"/>
+    <id>http://similarsu.github.io/jna/%E5%A4%A7%E5%8D%8Ejna%E6%98%A0%E5%B0%84%E8%A1%A8/</id>
+    <published>2019-08-30T00:22:02.000Z</published>
+    <updated>2019-08-30T00:22:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th>自定义</th><th>c</th><th>java</th></tr></thead><tbody><tr><td>WORD</td><td>unsigned short</td><td>short</td></tr><tr><td>BYTE</td><td>unsigned char</td><td>byte</td></tr><tr><td>LONG</td><td>int</td><td>int</td></tr><tr><td>BOOL</td><td>int</td><td>int</td></tr><tr><td>UINT</td><td>unsigned int</td><td>int</td></tr><tr><td>DWORD</td><td>unsigned int</td><td>int</td></tr><tr><td>LPDWORD</td><td>unsigned int*</td><td>Pointer</td></tr><tr><td>TRUE</td><td>1</td><td></td></tr><tr><td>FALSE</td><td>0</td><td></td></tr><tr><td>NULL</td><td>0</td><td></td></tr><tr><td>MAX_PATH</td><td>260</td><td></td></tr><tr><td>LLONG</td><td>long</td><td>NativeLong</td></tr><tr><td>LDWORD</td><td>long</td><td>NativeLong</td></tr><tr><td>INT64</td><td>long long</td><td>long</td></tr><tr><td>TP_U64</td><td>unsigned long long</td><td>long</td></tr><tr><td>HDC</td><td>void*</td><td>Pointer</td></tr><tr><td>HWND</td><td>void*</td><td>Pointer</td></tr><tr><td>LPVOID</td><td>void*</td><td>Pointer</td></tr><tr><td></td><td>char *</td><td>String</td></tr><tr><td></td><td>enum</td><td>int</td></tr><tr><td></td><td>bool</td><td>byte</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;自定义&lt;/th&gt;
+&lt;th&gt;c&lt;/th&gt;
+&lt;th&gt;java&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;WORD&lt;/td&gt;
+&lt;td&gt;unsigned short&lt;/td&gt;
+&lt;td&gt;short&lt;/td&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="jna" scheme="http://similarsu.github.io/categories/jna/"/>
+    
+    
+    <category term="jna" scheme="http://similarsu.github.io/tags/jna/"/>
+    
+    <category term="大华" scheme="http://similarsu.github.io/tags/%E5%A4%A7%E5%8D%8E/"/>
+    
+    <category term="映射" scheme="http://similarsu.github.io/tags/%E6%98%A0%E5%B0%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jna加载顺序</title>
+    <link href="http://similarsu.github.io/jna/jna%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/"/>
+    <id>http://similarsu.github.io/jna/jna%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/</id>
+    <published>2019-08-29T00:22:02.000Z</published>
+    <updated>2019-08-29T00:22:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、jna.library.path(idea vm or -D)。<br>2、环境变量PATH（Windows）, LD_LIBRARY_PATH（Linux）,DYLD_LIBRARY_PATH（OSX）。<br>3、classpath路径下的{OS}-{ARCH}/{LIBRARY}，如win32-x86, linux-amd64, or darwin。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1、jna.library.path(idea vm or -D)。&lt;br&gt;2、环境变量PATH（Windows）, LD_LIBRARY_PATH（Linux）,DYLD_LIBRARY_PATH（OSX）。&lt;br&gt;3、classpath路径下的{OS}-{ARCH}/{</summary>
+      
+    
+    
+    
+    <category term="jna" scheme="http://similarsu.github.io/categories/jna/"/>
+    
+    
+    <category term="jna" scheme="http://similarsu.github.io/tags/jna/"/>
+    
+    <category term="加载" scheme="http://similarsu.github.io/tags/%E5%8A%A0%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jna指南</title>
+    <link href="http://similarsu.github.io/jna/jna%E6%8C%87%E5%8D%97/"/>
+    <id>http://similarsu.github.io/jna/jna%E6%8C%87%E5%8D%97/</id>
+    <published>2019-08-28T00:22:02.000Z</published>
+    <updated>2019-08-28T00:22:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="引入相关jar"><a href="#引入相关jar" class="headerlink" title="引入相关jar"></a>引入相关jar</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jna.jar</span><br><span class="line">example.jar</span><br></pre></td></tr></table></figure><h3 id="放置相关so"><a href="#放置相关so" class="headerlink" title="放置相关so"></a>放置相关so</h3><h2 id="字段对应"><a href="#字段对应" class="headerlink" title="字段对应"></a>字段对应</h2><table><thead><tr><th>c</th><th>java</th></tr></thead><tbody><tr><td>LONG</td><td>NativeLong</td></tr><tr><td>char[]</td><td>byte[]</td></tr><tr><td>byte</td><td>byte</td></tr><tr><td>byte[]</td><td>byte[]</td></tr><tr><td>BOOL</td><td>int</td></tr><tr><td>WORD</td><td>short or int</td></tr><tr><td>void*</td><td>Pointer</td></tr><tr><td>LP**</td><td>Pointer</td></tr><tr><td>struct</td><td>Structure</td></tr><tr><td>CALLBACK</td><td>Callback</td></tr></tbody></table><span id="more"></span><h2 id="LP"><a href="#LP" class="headerlink" title="LP**"></a>LP**</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LP**对应相关去除LP的继承Structure的类的getPointer()</span><br></pre></td></tr></table></figure><h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><p><strong>对应继承Structure的类</strong></p><h2 id="NET"><a href="#NET" class="headerlink" title="NET_**"></a>NET_**</h2><p><strong>对应常量</strong></p><h2 id="CallBack"><a href="#CallBack" class="headerlink" title="**CallBack"></a>**CallBack</h2><p><strong>对应回调函数，继承Callback的接口</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">typedef void(CALLBACK *fLoginResultCallBack)(</span><br><span class="line">LONG lUserID,</span><br><span class="line">DWORD dwResult,</span><br><span class="line">LPNET_DVR_DEVICEINFO_V30 lpDeviceInfo</span><br><span class="line">void *pUser);</span><br><span class="line"></span><br><span class="line">public static interface FLoginResultCallBack extends Callback&#123;</span><br><span class="line">    public int invoke(NativeLong lUserID, int dwResult, Pointer lpDeviceinfo, Pointer pUser);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><strong>函数对应方法</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BOOL NET_DVR_Init()</span><br><span class="line">boolean  NET_DVR_Init();</span><br></pre></td></tr></table></figure><h2 id="string-长度计算"><a href="#string-长度计算" class="headerlink" title="string 长度计算"></a>string 长度计算</h2><p>if (wide) {<br>    int len = (string.length() + 1 ) * Native.WCHAR_SIZE;<br>    pointer = new Memory(len);<br>    pointer.setString(0, string, true);<br>}<br>else {<br>    byte[] data = Native.toByteArray(string);<br>    pointer = new Memory(data.length + 1);<br>    pointer.write(0, data, 0, data.length);<br>    pointer.setByte(data.length, (byte)0);<br>}</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;h3 id=&quot;引入相关jar&quot;&gt;&lt;a href=&quot;#引入相关jar&quot; class=&quot;headerlink&quot; title=&quot;引入相关jar&quot;&gt;&lt;/a&gt;引入相关jar&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;jna.jar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;example.jar&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;放置相关so&quot;&gt;&lt;a href=&quot;#放置相关so&quot; class=&quot;headerlink&quot; title=&quot;放置相关so&quot;&gt;&lt;/a&gt;放置相关so&lt;/h3&gt;&lt;h2 id=&quot;字段对应&quot;&gt;&lt;a href=&quot;#字段对应&quot; class=&quot;headerlink&quot; title=&quot;字段对应&quot;&gt;&lt;/a&gt;字段对应&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;c&lt;/th&gt;
+&lt;th&gt;java&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;LONG&lt;/td&gt;
+&lt;td&gt;NativeLong&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;char[]&lt;/td&gt;
+&lt;td&gt;byte[]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;byte[]&lt;/td&gt;
+&lt;td&gt;byte[]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WORD&lt;/td&gt;
+&lt;td&gt;short or int&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;void*&lt;/td&gt;
+&lt;td&gt;Pointer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LP**&lt;/td&gt;
+&lt;td&gt;Pointer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;struct&lt;/td&gt;
+&lt;td&gt;Structure&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CALLBACK&lt;/td&gt;
+&lt;td&gt;Callback&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
+    
+    
+    
+    <category term="jna" scheme="http://similarsu.github.io/categories/jna/"/>
+    
+    
+    <category term="jna" scheme="http://similarsu.github.io/tags/jna/"/>
+    
+    <category term="指南" scheme="http://similarsu.github.io/tags/%E6%8C%87%E5%8D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sha知多少</title>
+    <link href="http://similarsu.github.io/%E7%AE%97%E6%B3%95/sha/sha%E7%9F%A5%E5%A4%9A%E5%B0%91/"/>
+    <id>http://similarsu.github.io/%E7%AE%97%E6%B3%95/sha/sha%E7%9F%A5%E5%A4%9A%E5%B0%91/</id>
+    <published>2019-08-19T06:32:09.000Z</published>
+    <updated>2019-08-19T06:32:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>SHA-1算法的哈希值大小为160位，其计算输出长度为40位。<br>SHA-224算法的哈希值大小为224位，其计算输出长度为56位。<br>SHA-256算法的哈希值大小为256位，其计算输出长度为64位。</p><span id="more"></span><p>SHA-384算法的哈希值大小为384位，其计算输出长度为96位。<br>SHA-512算法的哈希值大小为256位，其计算输出长度为128位。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;SHA-1算法的哈希值大小为160位，其计算输出长度为40位。&lt;br&gt;SHA-224算法的哈希值大小为224位，其计算输出长度为56位。&lt;br&gt;SHA-256算法的哈希值大小为256位，其计算输出长度为64位。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://similarsu.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="sha" scheme="http://similarsu.github.io/categories/%E7%AE%97%E6%B3%95/sha/"/>
+    
+    
+    <category term="算法" scheme="http://similarsu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="sha" scheme="http://similarsu.github.io/tags/sha/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vsftp安装</title>
+    <link href="http://similarsu.github.io/%E5%85%B1%E4%BA%AB/ftp/vsftp%E5%AE%89%E8%A3%85/"/>
+    <id>http://similarsu.github.io/%E5%85%B1%E4%BA%AB/ftp/vsftp%E5%AE%89%E8%A3%85/</id>
+    <published>2019-08-14T01:21:15.000Z</published>
+    <updated>2019-08-14T01:21:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install vsftpd</span><br></pre></td></tr></table></figure><h2 id="匿名登录"><a href="#匿名登录" class="headerlink" title="匿名登录"></a>匿名登录</h2><p><strong>/etc/vsftp.cnf</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anonymous_enable&#x3D;YES</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="默认访问地址"><a href="#默认访问地址" class="headerlink" title="默认访问地址"></a>默认访问地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;passwd|grep ftp</span><br></pre></td></tr></table></figure><p><strong>/srv/ftp</strong></p><h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart vsftpd.service</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt install vsftpd&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;匿名登录&quot;&gt;&lt;a href=&quot;#匿名登录&quot; class=&quot;headerlink&quot; title=&quot;匿名登录&quot;&gt;&lt;/a&gt;匿名登录&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;/etc/vsftp.cnf&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;anonymous_enable&amp;#x3D;YES&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="共享" scheme="http://similarsu.github.io/categories/%E5%85%B1%E4%BA%AB/"/>
+    
+    <category term="ftp" scheme="http://similarsu.github.io/categories/%E5%85%B1%E4%BA%AB/ftp/"/>
+    
+    
+    <category term="安装" scheme="http://similarsu.github.io/tags/%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="共享" scheme="http://similarsu.github.io/tags/%E5%85%B1%E4%BA%AB/"/>
+    
+    <category term="vsftp" scheme="http://similarsu.github.io/tags/vsftp/"/>
+    
+    <category term="ftp" scheme="http://similarsu.github.io/tags/ftp/"/>
+    
+  </entry>
+  
+</feed>
