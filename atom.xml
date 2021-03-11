@@ -6,7 +6,7 @@
   <link href="http://similarsu.github.io/atom.xml" rel="self"/>
   
   <link href="http://similarsu.github.io/"/>
-  <updated>2020-12-10T05:57:42.000Z</updated>
+  <updated>2021-03-10T05:57:42.000Z</updated>
   <id>http://similarsu.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim中代码块缩进</title>
+    <link href="http://similarsu.github.io/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E4%B8%AD%E4%BB%A3%E7%A0%81%E5%9D%97%E7%BC%A9%E8%BF%9B/"/>
+    <id>http://similarsu.github.io/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E4%B8%AD%E4%BB%A3%E7%A0%81%E5%9D%97%E7%BC%A9%E8%BF%9B/</id>
+    <published>2021-03-10T05:57:42.000Z</published>
+    <updated>2021-03-10T05:57:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">美化代码块</span><br></pre></td></tr></table></figure><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>请参考<a href="/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E4%B8%AD%E4%BF%AE%E6%94%B9tab%E4%B8%BA4%E4%B8%AA%E7%A9%BA%E6%A0%BC/" title="vim中修改tab为4个空格">vim中修改tab为4个空格</a></p><span id="more"></span><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fun_print</span></span>()&#123;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;我在干什么&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;问你呢&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;我怎么知道&quot;</span>    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h2><p><strong>命令行模式</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:2,4&gt;</span><br></pre></td></tr></table></figure><p><strong>小提示：&gt;&gt;相当于2次缩进</strong></p><p><strong>效果</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fun_print</span></span>()&#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;我在干什么&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;问你呢&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;我怎么知道&quot;</span>    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="回缩"><a href="#回缩" class="headerlink" title="回缩"></a>回缩</h2><p><strong>命令行模式</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:2,4&lt;</span><br></pre></td></tr></table></figure><p><strong>效果</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fun_print</span></span>()&#123;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;我在干什么&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;问你呢&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;我怎么知道&quot;</span>    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;美化代码块&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;p&gt;请参考&lt;a href=&quot;/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E4%B8%AD%E4%BF%AE%E6%94%B9tab%E4%B8%BA4%E4%B8%AA%E7%A9%BA%E6%A0%BC/&quot; title=&quot;vim中修改tab为4个空格&quot;&gt;vim中修改tab为4个空格&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="文本编辑器" scheme="http://similarsu.github.io/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    <category term="vim" scheme="http://similarsu.github.io/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/"/>
+    
+    
+    <category term="vim" scheme="http://similarsu.github.io/tags/vim/"/>
+    
+    <category term="代码块" scheme="http://similarsu.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/"/>
+    
+    <category term="缩进" scheme="http://similarsu.github.io/tags/%E7%BC%A9%E8%BF%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim中修改tab为4个空格</title>
+    <link href="http://similarsu.github.io/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E4%B8%AD%E4%BF%AE%E6%94%B9tab%E4%B8%BA4%E4%B8%AA%E7%A9%BA%E6%A0%BC/"/>
+    <id>http://similarsu.github.io/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E4%B8%AD%E4%BF%AE%E6%94%B9tab%E4%B8%BA4%E4%B8%AA%E7%A9%BA%E6%A0%BC/</id>
+    <published>2021-03-09T05:57:42.000Z</published>
+    <updated>2021-03-09T05:57:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将vim中输入的tab键改为4个空格</span><br></pre></td></tr></table></figure><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> tabstop=4</span><br><span class="line"><span class="built_in">set</span> softtabstop=4</span><br><span class="line"><span class="built_in">set</span> shiftwidth=4</span><br><span class="line"><span class="built_in">set</span> expandtab</span><br><span class="line"><span class="built_in">set</span> autoindent</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><ul><li>tabstop</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设定tab为几个空格</span><br></pre></td></tr></table></figure><ul><li>softtabstop</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在编辑时，如该位置为Tab键后缩进的，按Blackspace时可直接将光标定位到Tab键前</span><br></pre></td></tr></table></figure><ul><li>shiftwidth</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可在命令行视图中使用</span><br></pre></td></tr></table></figure><ul><li>expandtab</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将Tab键转换成空格</span><br></pre></td></tr></table></figure><ul><li>autoindent</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">自动对齐，在编辑时，按回车键，光标定位到与上行对齐的位置</span><br></pre></td></tr></table></figure><h2 id="范围"><a href="#范围" class="headerlink" title="范围"></a>范围</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">当前用户：～&#x2F;.vimrc</span><br><span class="line">全局:&#x2F;etc&#x2F;vim&#x2F;vimrc</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;将vim中输入的tab键改为4个空格&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; tabstop=4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; softtabstop=4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; shiftwidth=4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; expandtab&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; autoindent&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="文本编辑器" scheme="http://similarsu.github.io/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    <category term="vim" scheme="http://similarsu.github.io/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/"/>
+    
+    
+    <category term="vim" scheme="http://similarsu.github.io/tags/vim/"/>
+    
+    <category term="tab" scheme="http://similarsu.github.io/tags/tab/"/>
+    
+    <category term="空格" scheme="http://similarsu.github.io/tags/%E7%A9%BA%E6%A0%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>h3c中sftp使用教程</title>
@@ -657,63 +715,6 @@
     <category term="jna" scheme="http://similarsu.github.io/tags/jna/"/>
     
     <category term="指南" scheme="http://similarsu.github.io/tags/%E6%8C%87%E5%8D%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sha知多少</title>
-    <link href="http://similarsu.github.io/%E7%AE%97%E6%B3%95/sha/sha%E7%9F%A5%E5%A4%9A%E5%B0%91/"/>
-    <id>http://similarsu.github.io/%E7%AE%97%E6%B3%95/sha/sha%E7%9F%A5%E5%A4%9A%E5%B0%91/</id>
-    <published>2019-08-19T06:32:09.000Z</published>
-    <updated>2019-08-19T06:32:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>SHA-1算法的哈希值大小为160位，其计算输出长度为40位。<br>SHA-224算法的哈希值大小为224位，其计算输出长度为56位。<br>SHA-256算法的哈希值大小为256位，其计算输出长度为64位。</p><span id="more"></span><p>SHA-384算法的哈希值大小为384位，其计算输出长度为96位。<br>SHA-512算法的哈希值大小为256位，其计算输出长度为128位。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;SHA-1算法的哈希值大小为160位，其计算输出长度为40位。&lt;br&gt;SHA-224算法的哈希值大小为224位，其计算输出长度为56位。&lt;br&gt;SHA-256算法的哈希值大小为256位，其计算输出长度为64位。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="http://similarsu.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="sha" scheme="http://similarsu.github.io/categories/%E7%AE%97%E6%B3%95/sha/"/>
-    
-    
-    <category term="算法" scheme="http://similarsu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="sha" scheme="http://similarsu.github.io/tags/sha/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vsftp安装</title>
-    <link href="http://similarsu.github.io/%E5%85%B1%E4%BA%AB/ftp/vsftp%E5%AE%89%E8%A3%85/"/>
-    <id>http://similarsu.github.io/%E5%85%B1%E4%BA%AB/ftp/vsftp%E5%AE%89%E8%A3%85/</id>
-    <published>2019-08-14T01:21:15.000Z</published>
-    <updated>2019-08-14T01:21:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install vsftpd</span><br></pre></td></tr></table></figure><h2 id="匿名登录"><a href="#匿名登录" class="headerlink" title="匿名登录"></a>匿名登录</h2><p><strong>/etc/vsftp.cnf</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anonymous_enable&#x3D;YES</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="默认访问地址"><a href="#默认访问地址" class="headerlink" title="默认访问地址"></a>默认访问地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;passwd|grep ftp</span><br></pre></td></tr></table></figure><p><strong>/srv/ftp</strong></p><h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart vsftpd.service</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt install vsftpd&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;匿名登录&quot;&gt;&lt;a href=&quot;#匿名登录&quot; class=&quot;headerlink&quot; title=&quot;匿名登录&quot;&gt;&lt;/a&gt;匿名登录&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;/etc/vsftp.cnf&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;anonymous_enable&amp;#x3D;YES&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="共享" scheme="http://similarsu.github.io/categories/%E5%85%B1%E4%BA%AB/"/>
-    
-    <category term="ftp" scheme="http://similarsu.github.io/categories/%E5%85%B1%E4%BA%AB/ftp/"/>
-    
-    
-    <category term="安装" scheme="http://similarsu.github.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="共享" scheme="http://similarsu.github.io/tags/%E5%85%B1%E4%BA%AB/"/>
-    
-    <category term="vsftp" scheme="http://similarsu.github.io/tags/vsftp/"/>
-    
-    <category term="ftp" scheme="http://similarsu.github.io/tags/ftp/"/>
     
   </entry>
   
