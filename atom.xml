@@ -6,7 +6,7 @@
   <link href="http://similarsu.github.io/atom.xml" rel="self"/>
   
   <link href="http://similarsu.github.io/"/>
-  <updated>2021-03-10T05:57:42.000Z</updated>
+  <updated>2021-04-30T05:57:42.000Z</updated>
   <id>http://similarsu.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim编辑模式下backspace按键失效</title>
+    <link href="http://similarsu.github.io/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%E4%B8%8Bbackspace%E5%A4%B1%E6%95%88/"/>
+    <id>http://similarsu.github.io/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%E4%B8%8Bbackspace%E5%A4%B1%E6%95%88/</id>
+    <published>2021-04-30T05:57:42.000Z</published>
+    <updated>2021-04-30T05:57:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">美化代码块</span><br></pre></td></tr></table></figure><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>请参考<a href="/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E4%B8%AD%E4%BF%AE%E6%94%B9tab%E4%B8%BA4%E4%B8%AA%E7%A9%BA%E6%A0%BC/" title="vim中修改tab为4个空格">vim中修改tab为4个空格</a></p><span id="more"></span><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fun_print</span></span>()&#123;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;我在干什么&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;问你呢&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;我怎么知道&quot;</span>    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h2><p><strong>命令行模式</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:2,4&gt;</span><br></pre></td></tr></table></figure><p><strong>小提示：&gt;&gt;相当于2次缩进</strong></p><p><strong>效果</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fun_print</span></span>()&#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;我在干什么&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;问你呢&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;我怎么知道&quot;</span>    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="回缩"><a href="#回缩" class="headerlink" title="回缩"></a>回缩</h2><p><strong>命令行模式</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:2,4&lt;</span><br></pre></td></tr></table></figure><p><strong>效果</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fun_print</span></span>()&#123;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;我在干什么&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;问你呢&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;我怎么知道&quot;</span>    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;美化代码块&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;p&gt;请参考&lt;a href=&quot;/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/vim%E4%B8%AD%E4%BF%AE%E6%94%B9tab%E4%B8%BA4%E4%B8%AA%E7%A9%BA%E6%A0%BC/&quot; title=&quot;vim中修改tab为4个空格&quot;&gt;vim中修改tab为4个空格&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="文本编辑器" scheme="http://similarsu.github.io/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    <category term="vim" scheme="http://similarsu.github.io/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/vim/"/>
+    
+    
+    <category term="vim" scheme="http://similarsu.github.io/tags/vim/"/>
+    
+    <category term="代码块" scheme="http://similarsu.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/"/>
+    
+    <category term="缩进" scheme="http://similarsu.github.io/tags/%E7%BC%A9%E8%BF%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>vim中代码块缩进</title>
@@ -643,78 +672,6 @@
     <category term="jna" scheme="http://similarsu.github.io/tags/jna/"/>
     
     <category term="加载" scheme="http://similarsu.github.io/tags/%E5%8A%A0%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jna指南</title>
-    <link href="http://similarsu.github.io/jna/jna%E6%8C%87%E5%8D%97/"/>
-    <id>http://similarsu.github.io/jna/jna%E6%8C%87%E5%8D%97/</id>
-    <published>2019-08-28T00:22:02.000Z</published>
-    <updated>2019-08-28T00:22:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="引入相关jar"><a href="#引入相关jar" class="headerlink" title="引入相关jar"></a>引入相关jar</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jna.jar</span><br><span class="line">example.jar</span><br></pre></td></tr></table></figure><h3 id="放置相关so"><a href="#放置相关so" class="headerlink" title="放置相关so"></a>放置相关so</h3><h2 id="字段对应"><a href="#字段对应" class="headerlink" title="字段对应"></a>字段对应</h2><table><thead><tr><th>c</th><th>java</th></tr></thead><tbody><tr><td>LONG</td><td>NativeLong</td></tr><tr><td>char[]</td><td>byte[]</td></tr><tr><td>byte</td><td>byte</td></tr><tr><td>byte[]</td><td>byte[]</td></tr><tr><td>BOOL</td><td>int</td></tr><tr><td>WORD</td><td>short or int</td></tr><tr><td>void*</td><td>Pointer</td></tr><tr><td>LP**</td><td>Pointer</td></tr><tr><td>struct</td><td>Structure</td></tr><tr><td>CALLBACK</td><td>Callback</td></tr></tbody></table><span id="more"></span><h2 id="LP"><a href="#LP" class="headerlink" title="LP**"></a>LP**</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LP**对应相关去除LP的继承Structure的类的getPointer()</span><br></pre></td></tr></table></figure><h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><p><strong>对应继承Structure的类</strong></p><h2 id="NET"><a href="#NET" class="headerlink" title="NET_**"></a>NET_**</h2><p><strong>对应常量</strong></p><h2 id="CallBack"><a href="#CallBack" class="headerlink" title="**CallBack"></a>**CallBack</h2><p><strong>对应回调函数，继承Callback的接口</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">typedef void(CALLBACK *fLoginResultCallBack)(</span><br><span class="line">LONG lUserID,</span><br><span class="line">DWORD dwResult,</span><br><span class="line">LPNET_DVR_DEVICEINFO_V30 lpDeviceInfo</span><br><span class="line">void *pUser);</span><br><span class="line"></span><br><span class="line">public static interface FLoginResultCallBack extends Callback&#123;</span><br><span class="line">    public int invoke(NativeLong lUserID, int dwResult, Pointer lpDeviceinfo, Pointer pUser);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><strong>函数对应方法</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BOOL NET_DVR_Init()</span><br><span class="line">boolean  NET_DVR_Init();</span><br></pre></td></tr></table></figure><h2 id="string-长度计算"><a href="#string-长度计算" class="headerlink" title="string 长度计算"></a>string 长度计算</h2><p>if (wide) {<br>    int len = (string.length() + 1 ) * Native.WCHAR_SIZE;<br>    pointer = new Memory(len);<br>    pointer.setString(0, string, true);<br>}<br>else {<br>    byte[] data = Native.toByteArray(string);<br>    pointer = new Memory(data.length + 1);<br>    pointer.write(0, data, 0, data.length);<br>    pointer.setByte(data.length, (byte)0);<br>}</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;h3 id=&quot;引入相关jar&quot;&gt;&lt;a href=&quot;#引入相关jar&quot; class=&quot;headerlink&quot; title=&quot;引入相关jar&quot;&gt;&lt;/a&gt;引入相关jar&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;jna.jar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;example.jar&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;放置相关so&quot;&gt;&lt;a href=&quot;#放置相关so&quot; class=&quot;headerlink&quot; title=&quot;放置相关so&quot;&gt;&lt;/a&gt;放置相关so&lt;/h3&gt;&lt;h2 id=&quot;字段对应&quot;&gt;&lt;a href=&quot;#字段对应&quot; class=&quot;headerlink&quot; title=&quot;字段对应&quot;&gt;&lt;/a&gt;字段对应&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;c&lt;/th&gt;
-&lt;th&gt;java&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;LONG&lt;/td&gt;
-&lt;td&gt;NativeLong&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;char[]&lt;/td&gt;
-&lt;td&gt;byte[]&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;byte&lt;/td&gt;
-&lt;td&gt;byte&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;byte[]&lt;/td&gt;
-&lt;td&gt;byte[]&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;BOOL&lt;/td&gt;
-&lt;td&gt;int&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;WORD&lt;/td&gt;
-&lt;td&gt;short or int&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;void*&lt;/td&gt;
-&lt;td&gt;Pointer&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;LP**&lt;/td&gt;
-&lt;td&gt;Pointer&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;struct&lt;/td&gt;
-&lt;td&gt;Structure&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CALLBACK&lt;/td&gt;
-&lt;td&gt;Callback&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;</summary>
-    
-    
-    
-    <category term="jna" scheme="http://similarsu.github.io/categories/jna/"/>
-    
-    
-    <category term="jna" scheme="http://similarsu.github.io/tags/jna/"/>
-    
-    <category term="指南" scheme="http://similarsu.github.io/tags/%E6%8C%87%E5%8D%97/"/>
     
   </entry>
   
