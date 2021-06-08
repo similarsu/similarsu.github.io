@@ -6,7 +6,7 @@
   <link href="http://similarsu.github.io/atom.xml" rel="self"/>
   
   <link href="http://similarsu.github.io/"/>
-  <updated>2021-04-30T05:57:42.000Z</updated>
+  <updated>2021-06-08T05:57:42.000Z</updated>
   <id>http://similarsu.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git如何忽略文件权限修改引起的冲突</title>
+    <link href="http://similarsu.github.io/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/git/git%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9%E5%BC%95%E8%B5%B7%E7%9A%84%E5%86%B2%E7%AA%81/"/>
+    <id>http://similarsu.github.io/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/git/git%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9%E5%BC%95%E8%B5%B7%E7%9A%84%E5%86%B2%E7%AA%81/</id>
+    <published>2021-06-08T05:57:42.000Z</published>
+    <updated>2021-06-08T05:57:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本机仓库迁移过程中，git status发现全部文件变为修改状态</span><br><span class="line">但是明明没有修改文件，为什么会被识别为修改状态?</span><br></pre></td></tr></table></figure><h3 id="变为修改状态"><a href="#变为修改状态" class="headerlink" title="变为修改状态"></a>变为修改状态</h3><img src="/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/git/git%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9%E5%BC%95%E8%B5%B7%E7%9A%84%E5%86%B2%E7%AA%81/1-1.png" class=""><h3 id="文件未变化"><a href="#文件未变化" class="headerlink" title="文件未变化"></a>文件未变化</h3><img src="/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/git/git%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9%E5%BC%95%E8%B5%B7%E7%9A%84%E5%86%B2%E7%AA%81/1-2.png" class=""><span id="more"></span><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git默认会检测文件权限的变化</span><br></pre></td></tr></table></figure><p><strong>默认配置如下，当前仓库/.git/config</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">……</span><br><span class="line">[core]</span><br><span class="line">  ……</span><br><span class="line">  filemode = <span class="literal">true</span></span><br><span class="line">  ……</span><br><span class="line">……</span><br></pre></td></tr></table></figure><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p><strong>忽略文件权限，有以下2种方式</strong></p><h3 id="修改本仓库"><a href="#修改本仓库" class="headerlink" title="修改本仓库"></a>修改本仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config core.filemode <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>或</p><p>修改.git/config文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">……</span><br><span class="line">[core]</span><br><span class="line">  ……</span><br><span class="line">  filemode = <span class="literal">false</span></span><br><span class="line">  ……</span><br><span class="line">……</span><br></pre></td></tr></table></figure><h3 id="修改全局"><a href="#修改全局" class="headerlink" title="修改全局"></a>修改全局</h3><p><strong>ps:如果该方式无效，请检查.git/config的core.filemode是否true，记住就近原则</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.filemode <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>或</p><p>修改~/.gitconfig</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">……</span><br><span class="line">[core]</span><br><span class="line">  ……</span><br><span class="line">  filemode = <span class="literal">false</span></span><br><span class="line">  ……</span><br><span class="line">……</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本机仓库迁移过程中，git status发现全部文件变为修改状态&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;但是明明没有修改文件，为什么会被识别为修改状态?&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;变为修改状态&quot;&gt;&lt;a href=&quot;#变为修改状态&quot; class=&quot;headerlink&quot; title=&quot;变为修改状态&quot;&gt;&lt;/a&gt;变为修改状态&lt;/h3&gt;&lt;img src=&quot;/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/git/git%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9%E5%BC%95%E8%B5%B7%E7%9A%84%E5%86%B2%E7%AA%81/1-1.png&quot; class=&quot;&quot;&gt;
+
+&lt;h3 id=&quot;文件未变化&quot;&gt;&lt;a href=&quot;#文件未变化&quot; class=&quot;headerlink&quot; title=&quot;文件未变化&quot;&gt;&lt;/a&gt;文件未变化&lt;/h3&gt;&lt;img src=&quot;/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/git/git%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9%E5%BC%95%E8%B5%B7%E7%9A%84%E5%86%B2%E7%AA%81/1-2.png&quot; class=&quot;&quot;&gt;</summary>
+    
+    
+    
+    <category term="团队协作" scheme="http://similarsu.github.io/categories/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/"/>
+    
+    <category term="git" scheme="http://similarsu.github.io/categories/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/git/"/>
+    
+    
+    <category term="修改" scheme="http://similarsu.github.io/tags/%E4%BF%AE%E6%94%B9/"/>
+    
+    <category term="git" scheme="http://similarsu.github.io/tags/git/"/>
+    
+    <category term="文件权限" scheme="http://similarsu.github.io/tags/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
+    
+    <category term="冲突" scheme="http://similarsu.github.io/tags/%E5%86%B2%E7%AA%81/"/>
+    
+  </entry>
   
   <entry>
     <title>vim编辑模式下backspace按键失效</title>
@@ -647,32 +679,6 @@
     <category term="大华" scheme="http://similarsu.github.io/tags/%E5%A4%A7%E5%8D%8E/"/>
     
     <category term="映射" scheme="http://similarsu.github.io/tags/%E6%98%A0%E5%B0%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jna加载顺序</title>
-    <link href="http://similarsu.github.io/jna/jna%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/"/>
-    <id>http://similarsu.github.io/jna/jna%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/</id>
-    <published>2019-08-29T00:22:02.000Z</published>
-    <updated>2019-08-29T00:22:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>1、jna.library.path(idea vm or -D)。<br>2、环境变量PATH（Windows）, LD_LIBRARY_PATH（Linux）,DYLD_LIBRARY_PATH（OSX）。<br>3、classpath路径下的{OS}-{ARCH}/{LIBRARY}，如win32-x86, linux-amd64, or darwin。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;1、jna.library.path(idea vm or -D)。&lt;br&gt;2、环境变量PATH（Windows）, LD_LIBRARY_PATH（Linux）,DYLD_LIBRARY_PATH（OSX）。&lt;br&gt;3、classpath路径下的{OS}-{ARCH}/{</summary>
-      
-    
-    
-    
-    <category term="jna" scheme="http://similarsu.github.io/categories/jna/"/>
-    
-    
-    <category term="jna" scheme="http://similarsu.github.io/tags/jna/"/>
-    
-    <category term="加载" scheme="http://similarsu.github.io/tags/%E5%8A%A0%E8%BD%BD/"/>
     
   </entry>
   
